@@ -1,0 +1,486 @@
+.imgLeft {
+    position: relative;
+    width: 800px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgLeft:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(225deg, rgba(43, 21, 107, 0.8), rgba(89, 56, 190, 0.8)) ;
+    z-index: 1;
+}
+
+.imgLeft img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tickitz {
+    display: flex;
+    flex-direction: column;
+}
+
+.tickitz img{
+    width: 500px;
+    height: 190px;
+    z-index: 1;
+    align-items: center;
+    margin-top: 25%;
+    margin-left: 19%;
+}
+
+.tickitz h2{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58px;
+    width: 408px;
+    height: 58px;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 0.003em;
+    z-index: 1;
+    margin-top: 25%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+}
+
+.content img {
+    width: 85px;
+    height: auto;
+    display: none;
+}
+
+.contentBox .header h1 {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 58px;
+    padding-top: 10%;
+    letter-spacing: 0.003em;
+    color: #121212;
+}
+
+.contentBox .header p {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    padding-top: 12px;
+    letter-spacing: 0.007em;
+    color: #AAAAAA;
+}
+
+.content .contentBox .form .first-name span {
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: 12px;
+    padding-top: 38px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    /* Text - Body */
+    color: #4E4B66;
+}
+
+.content .contentBox .form .last-name span {
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: 12px;
+    padding-top: 25px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    /* Text - Body */
+    color: #4E4B66;
+}
+
+.content .contentBox .form .phone-number span {
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: 12px;
+    padding-top: 22px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    /* Text - Body */
+    color: #4E4B66;
+}
+
+.email-form span {
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: 12px;
+    padding-top: 21px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    /* Text - Body */
+    color: #4E4B66;
+}
+
+.password-form span {
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: 12px;
+    padding-top: 25px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    /* Text - Body */
+    color: #4E4B66;
+}
+
+.content .contentBox .form .first-name input {
+    padding: 22px 202px 22px 24px;
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    box-sizing: border-box;
+    height: 64px;
+    width: 400px;
+    background: #FCFDFE;
+    
+    /* Border and Line */
+    border: 1px solid #DEDEDE;
+    border-radius: 16px;
+    
+    /* identical to box height */
+    letter-spacing: 0.75px;
+
+    /* Placeholder */
+    color: #A0A3BD;
+}
+
+.content .contentBox .form .last-name input {
+    padding: 22px 202px 22px 24px;
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    box-sizing: border-box;
+    height: 64px;
+    width: 400px;
+    background: #FCFDFE;
+    
+    /* Border and Line */
+    border: 1px solid #DEDEDE;
+    border-radius: 16px;
+    
+    /* identical to box height */
+    letter-spacing: 0.75px;
+
+    /* Placeholder */
+    color: #A0A3BD;
+}
+
+.password-form input {
+    padding: 22px 0px 22px 24px;
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    box-sizing: border-box;
+    height: 64px;
+    width: 400px;
+    background: #FCFDFE;
+    
+    /* Border and Line */
+    border: 1px solid #DEDEDE;
+    border-radius: 16px;
+    
+    /* identical to box height */
+    letter-spacing: 0.75px;
+
+    /* Placeholder */
+    color: #A0A3BD;
+}
+
+.content .contentBox .form .phone-number input {
+    padding: 22px 169px 22px 24px;
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    box-sizing: border-box;
+    height: 64px;
+    width: 400px;
+    background: #FCFDFE;
+    
+    /* Border and Line */
+    border: 1px solid #DEDEDE;
+    border-radius: 16px;
+    
+    /* identical to box height */
+    letter-spacing: 0.75px;
+
+    /* Placeholder */
+    color: #A0A3BD;
+}
+
+.email-form input {
+    padding: 22px 0px 22px 24px;
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    box-sizing: border-box;
+    height: 64px;
+    width: 400px;
+    background: #FCFDFE;
+    
+    /* Border and Line */
+    border: 1px solid #DEDEDE;
+    border-radius: 16px;
+    
+    /* identical to box height */
+    letter-spacing: 0.75px;
+
+    /* Placeholder */
+    color: #A0A3BD;
+}
+
+.password-from input{
+    padding: 22px 206px 22px 24px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+   
+    box-sizing: border-box;
+    height: 64px;
+    width: 400px;
+    background: #FCFDFE;
+
+    /* Border and Line */
+    border: 1px solid #DEDEDE;
+    border-radius: 16px;
+    
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.75px;
+
+    /* Placeholder */
+    color: #A0A3BD;
+}
+
+.inputBtn-form input {
+    width: 400px;
+    height: 64px;
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+    margin-top: 32px;
+    /* or 175% */
+   
+    /* Grayscale / Background */
+    color: #F7F7FC;
+
+    /* Primary / Default */
+    background: #5F2EEA;
+    border-radius: 16px;
+    box-sizing: border-box;
+    height: 64px;
+    width: 400px;
+    border: none;
+    cursor: pointer;
+}
+
+.inputBtn-form input:hover {
+    background: #7041f1;
+}
+
+.inputBtn-form[type="submit"] {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.005em;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 52px;
+    color: #8692A6;
+}
+
+
+.content .contentBox .inputSignIn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.content .contentBox .inputSignIn p {
+    padding-top: 32px;
+    padding-bottom: 52px;
+    position: absolute;
+    font-family:  'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: #8692A6;
+}
+
+.question {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.question1 p {
+    width: 262px;
+    height: 19px;
+    padding-top: 32px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: #8692A6;
+}
+
+.question2 p {
+    padding-top: 15%;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: #8692A6;
+} 
+
+.btn {
+    width: 400px;
+    height: 64px;
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+    margin-top: 32px;
+    /* or 175% */
+   
+    /* Grayscale / Background */
+    color: #F7F7FC;
+
+    /* Primary / Default */
+    background: #5F2EEA;
+    border-radius: 16px;
+    box-sizing: border-box;
+    height: 64px;
+    width: 400px;
+    border: none;
+    cursor: pointer;
+}
+
+.contentBox {
+    margin-left: 6%;
+}
+
+
+
+/* ---- Responsive ---- */
+
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imgLeft {
+        display: none;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .content img {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        margin-top: 15%;
+        margin-bottom: 10%;
+    }
+
+    .content .contentBox .header h1 {
+        padding-top: 0; 
+    }
+}
+
+

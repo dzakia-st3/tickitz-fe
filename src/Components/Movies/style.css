@@ -1,0 +1,136 @@
+.viewAll {
+	justify-content: center;
+	display: flex;
+	flex-flow: row wrap;
+    font-family: 'Mulish', sans-serif;
+	font-style: normal;
+}
+
+.top-upcoming {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5% 5% 0% 5%;
+}
+
+.top-left-upcoming {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-weight: 600;
+}
+
+
+.cardVA {
+	width: 223px;
+	height: 452px;
+	box-sizing: border-box;
+	background: #FFFFFF;
+	border: 0.5px solid #DEDEDE;
+	border-radius: 8px;
+	margin-right: 24px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	margin-top: 2%;
+}
+
+.cardVA:hover {
+	transform: scale(1.1); 
+	cursor: pointer;
+}
+
+.cardVA img {
+	max-width: 100%;
+	height: auto;
+    margin-top: 3%;
+}
+
+.cardVA h3 {
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 22px;
+	color: #14142B;
+	text-align: center;
+	letter-spacing: 0.15px;
+}
+
+.cardVA h4 {
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 16px;
+	text-align: center;
+	letter-spacing: 0.4px;
+	color: #A0A3BD;
+}
+
+.cardVA input {
+	box-sizing: border-box;
+	border: 1px solid #5F2EEA;
+	border-radius: 4px;
+	width: 159px;
+	height: 33px;
+}
+
+.cardVA input:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.cardVA input[type="button"] {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 18px;
+	text-align: center;
+	color: #5F2EEA;
+}
+
+.pagination {
+	margin-left: 40%;
+}
+
+button {
+	box-sizing: border-box;
+	width: 40px;
+	height: 40px;
+	background: #FFFFFF;
+	border-radius: 8px;
+	cursor: pointer;
+	border-style: none;
+	box-shadow: 0px 8px 16px rgba(95, 46, 234, 0.24);
+	font-family: 'Mulish', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 34px;
+	margin: 7% 0% 0% 2%
+}
+
+.btn-page:hover {
+	background: #5F2EEA;
+	box-shadow: 0px 8px 16px rgba(95, 46, 234, 0.24);
+	color: #FFFFFF;
+}
+
+/* ---- Responsive ---- */
+
+@media screen and (max-width: 768px) {
+
+    .month {
+        padding-right: 36px;
+    }
+    
+    .box {
+        flex: 0 0 auto;
+    }
+
+    .cardVA {
+        margin-bottom: 5%;
+    }
+}
+    
