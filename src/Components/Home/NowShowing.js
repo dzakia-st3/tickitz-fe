@@ -43,7 +43,7 @@ const NowShowing = () => {
                         ) : data?.result?.map((item) => {
                             return (
                                 <div className="card">
-                                    <img className='' src={`http://localhost:3000/uploads/${item.image}`} alt={item.title} title={item.title} />
+                                    <img className='' src={`https://starfish-app-2mjf6.ondigitalocean.app/uploads/${item.image}`} alt={item.title} title={item.title} />
                                 </div>
                             )
                         })}

@@ -29,7 +29,7 @@ export const GetMovies = (params) => {
         dispatch(GetMoviesRequest())
         axios({
             method: "GET",
-            url: `http://localhost:3000/api/v1/movie/?${page ? `page=${page}` : ``}${limit ? `&limit=${limit}` : ``}`,
+            url: `https://starfish-app-2mjf6.ondigitalocean.app/api/v1/movie/?${page ? `page=${page}` : ``}${limit ? `&limit=${limit}` : ``}`,
         })
             .then((res) => {
                 dispatch(GetMoviesSucces(res.data.data))
@@ -53,7 +53,7 @@ export const GetMoviesNS = () => {
         dispatch(GetMoviesNSRequest())
         axios({
             method: "GET",
-            url: "http://localhost:3000/api/v1/movie/",
+            url: "https://starfish-app-2mjf6.ondigitalocean.app/api/v1/movie/",
         })
             .then((res) => {
                 dispatch(GetMoviesSucces(res.data.data))
@@ -77,7 +77,7 @@ export const GetMoviesUC = () => {
         dispatch(GetMoviesUCRequest())
         axios({
             method: "GET",
-            url: "http://localhost:3000/api/v1/movie/",
+            url: "https://starfish-app-2mjf6.ondigitalocean.app/api/v1/movie/",
         })
             .then((res) => {
                 dispatch(GetMoviesSucces(res.data.data))
@@ -116,7 +116,7 @@ export const AddMovies = (formData, token) => {
         dispatch(AddMoviesRequest())
         axios({
             method: "POST",
-            url: "http://localhost:3000/api/v1/movie/",
+            url: "https://starfish-app-2mjf6.ondigitalocean.app/api/v1/movie/",
             data: formData,
             headers: {
                 authorization: token
@@ -160,7 +160,7 @@ export const UpdateMovies = (formData, token, id) => {
         dispatch(UpdateMoviesRequest())
         axios({
             method: "PATCH",
-            url: `http://localhost:3000/api/v1/movie/${id}`,
+            url: `https://starfish-app-2mjf6.ondigitalocean.app/api/v1/movie/${id}`,
             data: formData,
             headers: {
                 authorization: token
@@ -201,7 +201,7 @@ export const DeleteMovies = (id) => {
         dispatch(DeleteMoviesRequest(id))
         axios({
             method: "DELETE",
-            url: 'http://localhost:3000/api/v1/movie/:id',
+            url: 'https://starfish-app-2mjf6.ondigitalocean.app/api/v1/movie/:id',
             data: id,
             headers: {
                 Authorization: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjU3NDM5MDM2fQ.Qm-OEiGg1Lsm9RZ1_EtB0UXly52PbuaB_jK1b_gDa1w'

@@ -5,7 +5,7 @@ const Details = () => {
     return (
         <div className='details'>
             <div className="card3">
-                {/* <img className='' src={`http://localhost:3000/uploads/${item.image}`} alt={item.title} title={item.title} /> */}
+                {/* <img className='' src={`https://starfish-app-2mjf6.ondigitalocean.app/uploads/${item.image}`} alt={item.title} title={item.title} /> */}
             </div>
             <div>
                 <div>

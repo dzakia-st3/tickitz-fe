@@ -121,7 +121,7 @@ const DataMovie = () => {
                         <div className="card-movie" >
                             <h3>{`${item.title}`}</h3>
                             <img className="card-movie-list"
-                                src={`http://localhost:3000/uploads/${item.image}`} alt={item.title} title={item.title} />
+                                src={`https://starfish-app-2mjf6.ondigitalocean.app/uploads/${item.image}`} alt={item.title} title={item.title} />
                             <button className="btn-edit" onClick={() => setOpenForm(true)}>Edit</button>
                             <button className='btn-delete'>Delete</button>
                         </div>
