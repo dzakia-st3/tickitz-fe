@@ -1,6 +1,14 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import './style.css'
+import MainLogo from '../img/Tickitz 1.png'
+import ebv from '../img/ebv.id 2.png'
+import CineOne from '../img/CineOne21 2.png'
+import hiflix from '../img/hiflix 2.png'
+import twitter from '../img/eva_twitter-outline.png'
+import ig from '../img/bx_bxl-instagram.png'
+import fb from '../img/eva_facebook-outline.png'
+import youtube from '../img/feather_youtube.png'
 
 const Footer = () => {
     return (
@@ -8,7 +16,7 @@ const Footer = () => {
             <section className="end">
                 <div className="end-row">
                     <div className="tickitz-logo">
-                        <img src="https://trello.com/1/cards/62b5cca6d916004161f559b4/attachments/62be73bff4eaa88ec55bd6c7/download/Tickitz1.png"/>
+                        <img src={MainLogo}/>
                         <p>Stop waiting in line. Buy tickets <br/> conveniently, watch movies quietly.</p>
                     </div>
                     <div className="explore">
@@ -21,9 +29,9 @@ const Footer = () => {
                     <div className="ourSponsor">
                         <h2>Our Sponsor</h2>
                             <div className="cinema-logo">
-                                <img src="https://trello.com/1/cards/62b5cca6d916004161f559b4/attachments/62b5ccc5ece8e25fa1eecc8c/download/ebv.id_2.png" />
-                                <img src="https://trello.com/1/cards/62b5cca6d916004161f559b4/attachments/62b5cca6d916004161f559cc/download/CineOne21_2.png" />
-                                <img src="https://trello.com/1/cards/62b5cca6d916004161f559b4/attachments/62b5ccb2b24ce00792eeed57/download/hiflix_2.png" />
+                                <img src={ebv} />
+                                <img src={CineOne} />
+                                <img src={hiflix} />
                             </div>
                     </div>
                     <div className="followUs">
@@ -31,10 +39,10 @@ const Footer = () => {
                             <div className="container">
                                 <div className="socialMedia">
                                     <div className="socialMedia-logo">
-                                        <img src="https://trello.com/1/cards/62c1ceb2fb77f013c9ca1c2d/attachments/62c1ceb2fb77f013c9ca1c46/download/eva_facebook-outline.png" />
-                                        <img src="https://trello.com/1/cards/62c1ceb1028da45320b60785/attachments/62c1ceb1028da45320b6079d/download/bx_bxl-instagram.png" />
-                                        <img src="https://trello.com/1/cards/62c1ceb387e4f38939e9689a/attachments/62c1ceb387e4f38939e968b4/download/eva_twitter-outline.png" />
-                                        <img src="https://trello.com/1/cards/62c1ceb4d8e8fb1d365b312c/attachments/62c1ceb4d8e8fb1d365b3147/download/feather_youtube.png" />
+                                        <img src={fb} />
+                                        <img src={ig}/>
+                                        <img src={twitter} />
+                                        <img src={youtube} />
                                     </div>
                                     <div className="socialMedia-link">
                                         <Link to="/">Tickitz Cinema id</Link>

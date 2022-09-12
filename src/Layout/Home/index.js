@@ -1,6 +1,6 @@
 import React from 'react'
 import { Hero, NowShowing, Upcoming, Join} from "../../Components/Home"
-import Layout from '../../Components/Layout'
+import Layout from '../../Components/Layout global/Layout'
 
 const HomeLayout = () => {
   return (

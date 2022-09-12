@@ -71,7 +71,6 @@ body {
 
 .nowShowing {
 	background-color: #e3e5e9;
-	width: 100vw;
 }
 
 .top-ns {
@@ -143,6 +142,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding: 2% 0;
 }
 
 .card:hover {
@@ -160,7 +160,6 @@ body {
 .upcoming {
 	font-family: 'Mulish', sans-serif;
 	font-style: normal;
-	width: 100vw;
 }
 
 .top-upcoming {
@@ -182,7 +181,8 @@ body {
 .top-left-upcoming h3 {
 	font-size: 24px;
 	line-height: 30px;
-	color: #14142B;
+	font-weight: bold;
+	color: black
 }
 
 .top-right-upcoming a {
@@ -190,7 +190,7 @@ body {
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 20px;
-	color: #5F2EEA;
+	color: black;
 	text-align: right;
 	letter-spacing: 0.15px;
 }
@@ -321,7 +321,7 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	margin: 5% 10% 5% 10%;
+	margin: 5% 10%;
 	height: 300px;
 	background: #FFFFFF;
 	box-shadow: 0px 16px 32px rgba(186, 186, 186, 0.3);

@@ -2,6 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import './auth.css'
 
+const styleH1 = {
+    paddingTop : '3%'
+}
+
 const formSignUp = () => {
     return (
         <>
@@ -9,7 +13,7 @@ const formSignUp = () => {
                 <img src="./image/Tickitz 1.png" alt="tickitz" />
                 <div className="contentBox">
                     <div className = "header">
-                        <h1>Sign Up</h1>
+                        <h1 style={styleH1}>Sign Up</h1>
                         <p>Fill your additional details</p>
                     </div>
                     <div className="form">
@@ -42,7 +46,7 @@ const formSignUp = () => {
                         <input type="submit" value="Sign Up" name="" />
                     </div>
                     <div className="inputSignIn">
-                        <p>Already have account ? <Link to='/signIn'>Sign In</Link></p>
+                        <p>Already have account ? <Link to='/login'>Sign In</Link></p>
                     </div>
                 </div>
             </div>

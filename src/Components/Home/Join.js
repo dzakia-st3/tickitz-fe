@@ -3,8 +3,8 @@ import './style.css'
 
 const Join = () => {
     return (
-        <>
-             <section className="join">
+        <div className='container-join'>
+             <div className="join">
                 <div className="text">
                     <h2>Be the vanguard of the</h2>
                     <h3>Moviegoers</h3>
@@ -16,8 +16,8 @@ const Join = () => {
                 <div className="smallText">
                     <p>By joining you as a Tickitz member, <br/> we will always send you the latest updates via email.</p>
                 </div>
-            </section>
-        </>
+            </div>
+        </div>
     )
 }
 

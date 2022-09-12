@@ -3,27 +3,45 @@ import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { AuthLogin } from "../../Redux/actions/Auth"
 import { Link, useNavigate } from 'react-router-dom'
+import Swal from 'sweetalert2'
 import './auth.css'
 
 const FormSignIn = () => {
     const { data, error, loading, isLogin} = useSelector((state) => state.auth)
     const dispatch = useDispatch()
     let navigate = useNavigate()
+
     const [formLogin, setFormLogin] = useState({
         email: '',
         password: ''
     })
+
     const handleLogin = (e) => {
         e.preventDefault()
         dispatch(AuthLogin(formLogin))
     }
+    
     useEffect(() => {
-        if(isLogin === true) {
+        if(isLogin === true && data?.role === 'user') {
+            Swal.fire({
+                icon: 'success',
+                title: '',
+                text: 'Login Success',
+            })
             navigate('/', {replace: true})
-        } else {
-            navigate('/signIn', {replace: true})
+        } else if (isLogin === true && data?.role === 'admin') {
+            Swal.fire({
+                icon: 'success',
+                title: '',
+                text: 'Login Success',
+            })
+            navigate('/manage-movie', {replace: true})
+        }
+        else {
+            navigate('/login', {replace: true})
         }
     }, [isLogin]) 
+
     return (
     <>
         <div className="contentBox">
@@ -47,24 +65,20 @@ const FormSignIn = () => {
                         ...prevData,
                         password: e.target.value
                         }))}/>
-                    </div> 
+                    </div>  
                     {loading ? (
                     <button className="btn btn-primary" disabled={true}>Loading..</button>
                     ):(
                     <button className="btn btn-primary">Sign In</button>
-                    )} 
-                    {error && (
-                    alert ('Wrong email or password')
-                    // `${error.message}`
                     )}   
                 </form>           
             </div>
             <div className="question">
                 <div className="question1">
-                    <p>Forgot your password?<Link to='#'>Reset now</Link></p>
+                    <p>Forgot your password?  <Link to='#'>Reset now</Link></p>
                 </div>
                 <div className="question2">
-                    <p>Don’t have an account?<Link to="/signUp">Sign Up</Link></p>
+                    <p>Don’t have an account?  <Link to="/register">Sign Up</Link></p>
                 </div>
             </div>
         </div>
