@@ -1,0 +1,161 @@
+/* ---- Movie Selected ---- */
+
+.text-ms {
+  font-weight: bolder;
+  font-size: larger;
+  padding: 2% 0%;
+}
+
+.movie-selected {
+  width: 100%;
+  height: 60px;
+  box-sizing: border-box;
+  background: white;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 5%;
+}
+
+.movie-selected p {
+  font-weight: 600;
+}
+
+.btn-ms {
+  width: 20%;
+  background: #e3e5e9;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #5424d6;
+  font-weight: bolder;
+  height: 110%;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-ms:hover {
+  color: #e3e5e9;
+  background: #5424d6;
+}
+
+.btn-ms a {
+  text-decoration: none;
+  color: #5424d6;
+}
+
+.btn-ms a:hover {
+  color: #e3e5e9;
+}
+
+
+/* ---- Seat Booking ---- */
+
+.button-seat {
+  display: flex;
+  justify-content: space-between;
+  margin: 3% 0%;
+}
+
+.btn-change {
+  width: 20%;
+  background: #e3e5e9;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-weight: bolder;
+  height: 40px;
+  border: 2px solid #5424d6;
+  cursor: pointer;
+}
+
+.btn-change:hover {
+  background: #5424d6;
+  box-shadow: 2px 2px 2px #5424d6;
+}
+
+.btn-change a {
+  text-decoration: none;
+  color: #5424d6;
+}
+
+.btn-change a:hover {
+  color: #e3e5e9;
+}
+
+.btn-checkout {
+  width: 20%;
+  color: #e3e5e9;
+  border-radius: 3px;
+  box-sizing: border-box;
+  background: #5424d6;
+  height: 40px;
+  border: 2px solid #5424d6;
+  cursor: pointer;
+}
+
+.btn-checkout:hover {
+  background: #e3e5e9;
+  color: #5424d6;
+  box-shadow: 2px 2px 2px #5424d6;
+}
+
+.btn-checkout a {
+  text-decoration: none;
+  color: #e3e5e9;
+}
+
+.btn-checkout a:hover {
+  color: #5424d6;
+}
+
+.seat {
+  background-color: #444451;
+  height: 14px;
+  width: 16px;
+  margin: 3px;
+  border-radius: 6px 6px 0 0;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Sold {
+  background-color: #fff;
+}
+
+.Selected {
+  background-color: #6feaf6;
+}
+
+
+/* ---- Order Info ---- */
+
+.order-box {
+  box-sizing: border-box;
+  background: white;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0% 7%;
+}
+
+
+/* ---- Personal Info ---- */
+
+.personal-box {
+  padding: 10% 0;
+}
+.phone-number-box {
+  box-sizing: border-box;
+  border: 1px solid rgb(118, 118, 118);
+  border-radius: 2px;
+  padding: 0 4%;
+  margin-bottom: 5%;
+}
+

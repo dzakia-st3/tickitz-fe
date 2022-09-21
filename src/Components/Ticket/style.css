@@ -1,0 +1,25 @@
+.ticket-card {
+    box-sizing: border-box;
+    background-color: white;
+    width: 45%;
+    height: 80%;
+    display: flex;
+    align-self: center;
+    border-radius: 10px 0 0 10px;
+    flex-direction: column;
+    margin-bottom: 5%;
+}
+
+.ticket-card-right {
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 0 10px 10px 0;
+    width: 20%;
+    height: 80%;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    margin-bottom: 5%;
+    border-left: 1px solid grey;
+    border-left-style: dashed;
+}

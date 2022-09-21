@@ -1,9 +1,8 @@
 .details {
-    display: flex;
-    margin-left: 5%;
-    margin-right: 5%;
+	display: flex;
+	margin: 5% 5%;
+	padding: 2% 3%;
 }
-
 .text2 {
     display: flex;
 }
@@ -13,10 +12,57 @@
 	background: #fff;
 	border: 2px solid #DEDEDE;
 	border-radius: 8px;
-	margin: 4% 3%;
-    padding: 8%;
+	margin: 4% 5%;
+	padding: 0 3%;
+	width: 30%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
+
+.card-schedule {
+	width: 30%;
+	box-sizing: border-box;
+	background-color: #fff;
+	padding: 3% 3%;
+	margin: 1% 1%;
+	border-radius: 4px;
+}
+
+.time-card {
+	box-sizing: border-box;
+	margin: 3% 2% ;
+	width: 20%;
+	padding: 2% 2%;
+	text-align: center;
+	font-size: smaller;	
+	cursor: pointer;
+}
+
+.time-card:hover {
+	background-color: rgb(219, 217, 217);
+	border-radius: 3px;
+}
+
+.btn-booking {
+	width: 100%;
+	color: #e3e5e9;
+	border-radius: 5px;
+	box-sizing: border-box;
+	background-color: #5424d6;
+	letter-spacing: 1px;
+	border: none;
+	cursor: pointer;
+	padding: 3% 0;
+  }
+  
+  .btn-booking:hover {
+	background: #754bea;
+	box-shadow: 1px 1px 3px #5424d6;
+  }
+  
+  .btn-booking a {
+	text-decoration: none;
+	color: #e3e5e9;
+  }

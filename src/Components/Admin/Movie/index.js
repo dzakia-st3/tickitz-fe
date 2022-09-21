@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import moment from 'moment';
 import { useDispatch, useSelector, } from "react-redux/es/exports";
-import { AddMovies, UpdateMovies } from "../../../../Redux/actions/Movies";
-import { GetMovies } from "../../../../Redux/actions/Movies";
+import { AddMovies, UpdateMovies } from "../../../Redux/actions/Movies";
+import { GetMovies } from "../../../Redux/actions/Movies";
 import { useSearchParams } from "react-router-dom";
 import Swal from "sweetalert2";
 import './style.css'
@@ -121,7 +121,7 @@ const DataMovie = () => {
                         <div className="card-movie" >
                             <h3>{`${item.title}`}</h3>
                             <img className="card-movie-list"
-                                src={`https://starfish-app-2mjf6.ondigitalocean.app/uploads/${item.image}`} alt={item.title} title={item.title} />
+                                src={`${process.env.REACT_APP_URL_BE}/uploads/${item.image}`} alt={item.title} title={item.title} />
                             <button className="btn-edit" onClick={() => setOpenForm(true)}>Edit</button>
                             <button className='btn-delete'>Delete</button>
                         </div>

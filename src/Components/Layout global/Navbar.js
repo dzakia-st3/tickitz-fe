@@ -23,7 +23,7 @@ const Navbar = () => {
           <div className='nav-left'>
           {data?.role === 'admin' ? (
             <>
-            <img src={MainLogoPurple} />
+            <Link to = {'/'}><img src={MainLogoPurple} /></Link>
             <div className='nav-left-text-admin'>
               <Link to={'#'}>Dashboard</Link>
               <Link to={'/manage-movie'}>Manage Movie</Link>
@@ -32,7 +32,7 @@ const Navbar = () => {
             </>
             ) : (
               <>
-              <img src={MainLogoPurple} />
+              <Link to = {'/'}><img src={MainLogoPurple} /></Link>
               <div className='nav-left-text'>
                 <Link to={'/'}>Home</Link>
                 <Link to={'/movies'}>List Movie</Link>

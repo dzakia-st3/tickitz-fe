@@ -29,7 +29,7 @@ export const GetMovies = (params) => {
         dispatch(GetMoviesRequest())
         axios({
             method: "GET",
-            url: `https://starfish-app-2mjf6.ondigitalocean.app/api/v1/movie/?${page ? `page=${page}` : ``}${limit ? `&limit=${limit}` : ``}`,
+            url: `${process.env.REACT_APP_URL_BE}/api/v1/movie/?${page ? `page=${page}` : ``}${limit ? `&limit=${limit}` : ``}`,
         })
             .then((res) => {
                 dispatch(GetMoviesSucces(res.data.data))
@@ -53,7 +53,7 @@ export const GetMoviesNS = () => {
         dispatch(GetMoviesNSRequest())
         axios({
             method: "GET",
-            url: "https://starfish-app-2mjf6.ondigitalocean.app/api/v1/movie/",
+            url: `${process.env.REACT_APP_URL_BE}/api/v1/movie/`,
         })
             .then((res) => {
                 dispatch(GetMoviesSucces(res.data.data))
@@ -77,10 +77,34 @@ export const GetMoviesUC = () => {
         dispatch(GetMoviesUCRequest())
         axios({
             method: "GET",
-            url: "https://starfish-app-2mjf6.ondigitalocean.app/api/v1/movie/",
+            url: `${process.env.REACT_APP_URL_BE}/api/v1/movie/`,
         })
             .then((res) => {
                 dispatch(GetMoviesSucces(res.data.data))
+            })
+            .catch((err) => {
+                dispatch(GetMoviesError(err.response))
+            })
+    }
+}
+
+
+const GetMoviesRequestbyId = () => {
+    return {
+        type: "GET_MOVIES_BY_ID"
+    }
+}
+
+
+export const GetMoviesbyId = (id) => {
+    return (dispatch) => {
+        dispatch(GetMoviesRequestbyId())
+        axios({
+            method: "GET",
+            url: `${process.env.REACT_APP_URL_BE}/api/v1/movie/${id}`,
+        })
+            .then((res) => {
+                dispatch(GetMoviesSucces(res))
             })
             .catch((err) => {
                 dispatch(GetMoviesError(err.response))
@@ -116,7 +140,7 @@ export const AddMovies = (formData, token) => {
         dispatch(AddMoviesRequest())
         axios({
             method: "POST",
-            url: "https://starfish-app-2mjf6.ondigitalocean.app/api/v1/movie/",
+            url: `${process.env.REACT_APP_URL_BE}/api/v1/movie/`,
             data: formData,
             headers: {
                 authorization: token
@@ -160,7 +184,7 @@ export const UpdateMovies = (formData, token, id) => {
         dispatch(UpdateMoviesRequest())
         axios({
             method: "PATCH",
-            url: `https://starfish-app-2mjf6.ondigitalocean.app/api/v1/movie/${id}`,
+            url: `${process.env.REACT_APP_URL_BE}/api/v1/movie/${id}`,
             data: formData,
             headers: {
                 authorization: token
@@ -201,7 +225,7 @@ export const DeleteMovies = (id) => {
         dispatch(DeleteMoviesRequest(id))
         axios({
             method: "DELETE",
-            url: 'https://starfish-app-2mjf6.ondigitalocean.app/api/v1/movie/:id',
+            url: `${process.env.REACT_APP_URL_BE}/api/v1/movie/:id`,
             data: id,
             headers: {
                 Authorization: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjU3NDM5MDM2fQ.Qm-OEiGg1Lsm9RZ1_EtB0UXly52PbuaB_jK1b_gDa1w'

@@ -56,10 +56,10 @@ const Upcoming = () => {
                         ) : data?.result?.map((item) => {
                             return (
                                 <div className="card2">
-                                    <img className='' src={`https://starfish-app-2mjf6.ondigitalocean.app/uploads/${item.image}`} alt={item.title} title={item.title} />
+                                    <img className='' src={`${process.env.REACT_APP_URL_BE}/uploads/${item.image}`} alt={item.title} title={item.title} />
                                     <h3>{`${item.title}`}</h3>
                                     <h4>{`${item.categories}`}</h4>
-                                    <input type="button" value="Details" name="" />
+                                    <button className='btn-upcoming'><Link to={`/details/${item.id}`}>Details</Link></button>
                                 </div>
                             )
                         })}

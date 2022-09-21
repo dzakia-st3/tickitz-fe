@@ -1,43 +1,67 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { useParams } from 'react-router-dom'
+import { GetMoviesbyId } from '../../Redux/actions/Movies'
 import './style.css'
 
 const Details = () => {
+    let { id } = useParams()
+    console.log (id, 'cek id masuk')
+
+    const dispatch = useDispatch()
+
+    const { data } = useSelector((state) => state.movies )
+
+    const dataMovie = data?.data?.data[0]
+    console.log (dataMovie, 'cek data movie detail')
+
+    useEffect (() => {
+        dispatch(GetMoviesbyId(id))
+    }, [])
+
+
     return (
         <div className='details'>
             <div className="card3">
-                {/* <img className='' src={`https://starfish-app-2mjf6.ondigitalocean.app/uploads/${item.image}`} alt={item.title} title={item.title} /> */}
+                <img className='' src={`${process.env.REACT_APP_URL_BE}/uploads/${dataMovie?.image}`} alt={dataMovie?.title} title={dataMovie?.title}/>
             </div>
             <div>
                 <div>
                     <div>
-                        <h2>Spider-Man: Homecoming</h2>
-                        <h3>Adventur, Action, Sci-Fi</h3>
+                        <h2>{dataMovie?.title}</h2>
+                        <h3>{dataMovie?.categories}</h3>
                     </div>
                     <div className='text2'>
                         <div>
                             <div>
                                 <h5>Release date</h5>
-                                <h4>June 28, 2017</h4>
+                                <h4>{dataMovie?.release_date.slice(0,10)}</h4>
                             </div>
-                            <div>
+                            <div style={{
+                                marginTop: 50
+                            }}>
                                 <h5>Duration</h5>
-                                <h4>2 hours 13 minutes</h4>
+                                <h4>{`${dataMovie?.duration_hour} hours ${dataMovie?.duration_minute} minutes`}</h4>
                             </div>
                         </div>
-                        <div>
+                        <div style = {{
+                            marginLeft:  50
+                        }}>
                             <div>
                                 <h5>Directed by</h5>
-                                <h4>Jon Watss</h4>
+                                <h4>{dataMovie?.directed_by}</h4>
                             </div>
-                            <div>
+                            <div style={{
+                                marginTop: 50
+                            }}>
                                 <h5>Casts</h5>
-                                <h4>Tom Holland, Michael Keaton, Robert Downey Jr., ...</h4>
+                                <h4>{`${dataMovie?.cast}, ...`}</h4>
                             </div>
                         </div>
                     </div>
                 </div>
                 <hr />
-                <div>Thrilled by his experience with the Avengers, Peter returns home, where he lives with his Aunt May, under the watchful eye of his new mentor Tony Stark, Peter tries to fall back into his normal daily routine - distracted by thoughts of proving himself to be more than just your friendly neighborhood Spider-Man - but when the Vulture emerges as a new villain, everything that Peter holds most important will be threatened. </div>
+                <div>{dataMovie?.synopsis}</div>
             </div>
 
         </div>

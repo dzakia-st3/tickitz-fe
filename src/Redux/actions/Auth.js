@@ -25,7 +25,7 @@ export const AuthLogin = (formData) => {
         dispatch(LoginRequest())
         axios({
             method: "POST",
-            url: "https://starfish-app-2mjf6.ondigitalocean.app/api/v1/auth/login",
+            url: `${process.env.REACT_APP_URL_BE}/api/v1/auth/login`,
             data: {
                 email: formData.email,
                 password: formData.password

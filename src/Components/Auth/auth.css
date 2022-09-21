@@ -89,7 +89,6 @@
 }
 
 .first-name span {
-    font-family: 'Mulish', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -100,7 +99,6 @@
 }
 
 .last-name span {
-    font-family: 'Mulish', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -112,7 +110,6 @@
 }
 
 .phone-number span {
-    font-family: 'Mulish', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -124,7 +121,6 @@
 }
 
 .email-form span {
-    font-family: 'Mulish', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -136,7 +132,6 @@
 }
 
 .password-form span {
-    font-family: 'Mulish', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -150,7 +145,6 @@
 
 .content input {
     padding-left: 5%;
-    font-family: 'Mulish', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
@@ -166,7 +160,6 @@
 
 .password-form input {
     padding-left: 5%;
-    font-family: 'Mulish', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
@@ -182,7 +175,6 @@
 
 .email-form input {
     padding-left: 5%;
-    font-family: 'Mulish', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
@@ -197,7 +189,6 @@
 }
 
 .inputBtn-form input {
-    font-family: 'Mulish', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -261,7 +252,6 @@
 
 .btn {
     width: 400px;
-    font-family: 'Mulish', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;

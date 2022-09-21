@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from '../../Components/Layout global/Layout'
-import DataMovie from '../../Components/Admin/Movie/Data Movie'
+import DataMovie from '../../Components/Admin/Movie'
 
 const ManageMovieLayout = () => {
     return (

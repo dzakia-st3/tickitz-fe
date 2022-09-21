@@ -1,5 +1,6 @@
 import React from 'react'
 import './style.css'
+import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { GetMovies } from '../../Redux/actions/Movies'
 import { useDispatch, useSelector } from 'react-redux'
@@ -86,15 +87,15 @@ const Movies = () => {
                 </div>
                 {data.loading ? (<Loading />) : (
                     <div className="viewAll">
-                        {!data.result.length ? (
+                        {!data?.result?.length ? (
                             <EmptyState />
-                        ) : data.result.map((item) => {
+                        ) : data?.result?.map((item) => {
                             return (
                                 <div className="cardVA" >
-                                    <img className='' src={`https://starfish-app-2mjf6.ondigitalocean.app/uploads/${item.image}`} alt={item.title} title={item.title} />
+                                    <img className='' src={`${process.env.REACT_APP_URL_BE}/uploads/${item.image}`} alt={item.title} title={item.title} />
                                     <h3>{`${item.title}`}</h3> 
                                     <h4>{`${item.categories}`}</h4>
-                                    <input type="button" value="Details" name="" />
+                                    <button className='btn-upcoming'><Link to={`/details/${item.id}`}>Details</Link></button>
                                 </div>
                         )
                     })}

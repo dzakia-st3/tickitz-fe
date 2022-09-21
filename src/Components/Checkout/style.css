@@ -1,0 +1,51 @@
+/* ---- Payment Info ---- */
+
+.payment-info {
+    width: 100%;
+    box-sizing: border-box;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2% 5%;
+}
+
+
+/* ---- Payment Method ---- */
+
+.payment-method {
+    width: 100%;
+    box-sizing: border-box;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5% 4%;
+}
+
+.payment-method-card {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card-pm {
+    width: 23%;
+    box-sizing: border-box;
+    border: 1px solid #e3e5e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+
+.card-pm img {
+    width: 60%;
+}
+

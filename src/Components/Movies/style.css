@@ -2,7 +2,6 @@
 	justify-content: center;
 	display: flex;
 	flex-flow: row wrap;
-    font-family: 'Mulish', sans-serif;
 	font-style: normal;
 }
 
@@ -103,7 +102,6 @@
 	cursor: pointer;
 	border-style: none;
 	box-shadow: 0px 8px 16px rgba(95, 46, 234, 0.24);
-	font-family: 'Mulish', sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 15px;
