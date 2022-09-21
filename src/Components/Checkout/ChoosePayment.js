@@ -50,7 +50,7 @@ const ChoosePayment = () => {
       </div>
       <div className="button-seat">
         <button className="btn-change"><Link to={'/booking'}>Previous step</Link></button>
-        <button className="btn-checkout"><Link to={'/ticket'}>Pay your order</Link></button>
+        <button className="btn-checkout"><Link to={'/profile'}>Pay your order</Link></button>
       </div>
     </>
   )
