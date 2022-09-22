@@ -55,7 +55,8 @@
 .button-seat {
   display: flex;
   justify-content: space-between;
-  margin: 3% 0%;
+  margin-top: 4%;
+  margin-bottom: 7%;
 }
 
 .btn-change {
@@ -109,12 +110,50 @@
   color: #5424d6;
 }
 
-.seat {
-  background-color: #444451;
-  height: 14px;
-  width: 16px;
-  margin: 3px;
-  border-radius: 6px 6px 0 0;
+.choose-seat {
+  width: 100%;
+  box-sizing: border-box;
+  background: white;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 2% 5%;
+}
+
+.choose-seat p {
+  font-weight: 600;
+}
+
+.text5 {
+  font-weight: lighter;
+  text-align: center;
+  margin-top: 7%;
+}
+
+.line {
+  width: 58%;
+  border: 5px solid lightgrey;
+  border-radius: 50px;
+}
+
+.number {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -67px;
+  margin-left: 137px;
+  z-index: 20;
+  width: 60%;
+}
+
+.number p {
+  font-weight: lighter;
+  font-size: smaller;
+}
+
+.text7 {
+  margin-top: 6%;
+  margin-left: 110px;
 }
 
 .row {
@@ -123,12 +162,52 @@
   display: flex;
 }
 
+.Available {
+  background-color: #e3e5e9;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+
 .Sold {
-  background-color: #fff;
+  background-color: #444451;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
 }
 
 .Selected {
-  background-color: #6feaf6;
+  background-color: #5424d6;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+
+.text8 {
+  font-weight: lighter;
+  font-size: smaller;
+}
+
+.seat-note {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80px;
+}
+
+.seat-note2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 55px;
+}
+
+.seating-key {
+  display: flex;
+  margin-left: 110px;
+  margin-bottom: 5%;
+  width: 45%;
+  justify-content: space-between;
 }
 
 

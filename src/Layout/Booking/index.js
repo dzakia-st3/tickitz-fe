@@ -9,7 +9,6 @@ const BookingLayout = () => {
         display : 'flex',
         justifyContent: 'center',
         backgroundColor: '#e3e5e9',
-        height: '100vh',
         paddingTop: '2%'
         }}>
         <div style={{
