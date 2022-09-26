@@ -7,6 +7,10 @@ Tickitz is a web application that helps in booking cinema tickets. Available in 
 Using Netlify for deployment. Here's the link,
 [demo](https://tickitz-dzakia.netlify.app/)
 
+## Related
+
+[Tickitz BE](https://github.com/dzakia-st3/tickitz-be)
+
 ## Documentation 
 
 <img src="./src/Components/img/Tickitz-Home.png"/>
