@@ -116,7 +116,7 @@ const ProofPayment = () => {
               justifyContent: 'center',
               padding: '20% 0'
             }}>
-              <img src = {QRCode}></img>
+              <img src={QRCode}></img>
             </div>
           </div>
         </div>

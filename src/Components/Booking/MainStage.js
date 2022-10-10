@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { ReactReduxContext, Provider, useDispatch, useSelector } from "react-redux";
 import { Stage, Layer } from "./react-konva";
 import Section from "./Section";
-import SeatPopup from "./SeatPopup";
+import OrderInfo from "./OrderInfo";
 
 import * as layout from "./Layout";
+import { AddSeat } from "../../Redux/actions/Seat";
 
 function findSeat(seatId, seats) {
     if (!seatId) {
@@ -35,6 +37,8 @@ const useFetch = url => {
 };
 
 const MainStage = props => {
+    const dispatch = useDispatch()
+
     const jsonData = useFetch("./seats-data.json");
     const containerRef = React.useRef(null);
     const stageRef = React.useRef(null);
@@ -51,6 +55,7 @@ const MainStage = props => {
     const [selectedSeatsIds, setSelectedSeatsIds] = React.useState([]);
 
     const [popup, setPopup] = React.useState({ seat: null });
+
 
     // calculate available space for drawing
     React.useEffect(() => {
@@ -77,15 +82,6 @@ const MainStage = props => {
         setVirtualWidth(clientRect.width);
     }, [jsonData, size]);
 
-    // togle scale on double clicks or taps
-    //   const toggleScale = React.useCallback(() => {
-    //     if (scale === 1) {
-    //       setScale(scaleToFit);
-    //     } else {
-    //       setScale(1);
-    //     }
-    //   }, [scale, scaleToFit]);
-
     let lastSectionPosition = 0;
 
     if (jsonData === null) {
@@ -102,79 +98,62 @@ const MainStage = props => {
                 backgroundColor: "white",
                 width: "45vw",
                 height: "45vh",
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'flex-start',
                 background: 'border-box',
-                alignSelf: 'flex-start',
-                flex: 'auto',
             }}
             ref={containerRef}
         >
-            <Stage
-                y={5}
-                x={68}
-                ref={stageRef}
-                width={size.width}
-                height={size.height}
-            // draggable
-            // dragBoundFunc={pos => {
-            //   pos.x = Math.min(
-            //     size.width / 2,
-            //     Math.max(pos.x, -virtualWidth * scale + size.width / 2)
-            //   );
-            //   pos.y = Math.min(size.height / 2, Math.max(pos.y, -size.height / 2));
-            //   return pos;
-            // }}
-            // onDblTap={toggleScale}
-            // onDblClick={toggleScale}
-            // scaleX={scale}
-            // scaleY={scale}
-            >
-                <Layer>
-                    {jsonData.seats.sections.map((section, index) => {
-                        const height = layout.getSectionHeight(section);
-                        const position = lastSectionPosition + layout.SECTIONS_MARGIN;
-                        lastSectionPosition = position + height;
-                        const width = layout.getSectionWidth(section);
+            <ReactReduxContext.Consumer>
+                {({ store }) => (
+                    <Stage
+                        y={-10}
+                        x={30}
+                        width={size.width}
+                        height={size.height}
+                    >
+                        <Provider store={store}>
+                            <Layer>
+                                {jsonData.seats.sections.map((section, index) => {
+                                    const height = layout.getSectionHeight(section);
+                                    const position = lastSectionPosition + layout.SECTIONS_MARGIN;
+                                    lastSectionPosition = position + height;
+                                    const width = layout.getSectionWidth(section);
 
-                        const offset = (maxSectionWidth - width) / 2;
+                                    const offset = (maxSectionWidth - width) / 2;
 
-                        return (
-                            <Section
-                                x='50'
-                                y='5'
-                                height={height}
-                                key={index}
-                                section={section}
-                                selectedSeatsIds={selectedSeatsIds}
-                                onHoverSeat={(seat, pos) => {
-                                    setPopup({
-                                        seat: seat,
-                                        position: pos
-                                    });
-                                }}
-                                onSelectSeat={seatId => {
-                                    const newIds = selectedSeatsIds.concat([seatId]);
-                                    setSelectedSeatsIds(newIds);
-                                }}
-                                onDeselectSeat={seatId => {
-                                    const ids = selectedSeatsIds.slice();
-                                    ids.splice(ids.indexOf(seatId), 1);
-                                    setSelectedSeatsIds(ids);
-                                }}
-                            />
-                        );
-                    })}
-                </Layer>
-            </Stage>
-            {/* draw popup as html */}
-            {/* {popup.seat && (
-        <SeatPopup
-          position={popup.position}
-          seatId={popup.seat}
-          onClose={() => {
-            setPopup({ seat: null });
-          }}
-        />
-      )} */}
+                                    return (
+                                        <Section
+                                            x='50'
+                                            y='5'
+                                            height={height}
+                                            key={index}
+                                            section={section}
+                                            selectedSeatsIds={selectedSeatsIds}
+                                            onHoverSeat={(seat, pos) => {
+                                                setPopup({
+                                                    seat: seat,
+                                                    position: pos
+                                                });
+                                            }}
+                                            onSelectSeat={seatId => {
+                                                const newIds = selectedSeatsIds.concat([seatId]);
+                                                setSelectedSeatsIds(newIds);
+                                            }}
+                                            onDeselectSeat={seatId => {
+                                                const ids = selectedSeatsIds.slice();
+                                                ids.splice(ids.indexOf(seatId), 1);
+                                                setSelectedSeatsIds(ids);
+                                            }}
+                                        />
+                                    );
+                                })}
+                            </Layer>
+                        </Provider>
+                    </Stage>
+                )}
+            </ReactReduxContext.Consumer>
         </div>
     );
 };

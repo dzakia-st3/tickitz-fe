@@ -6,16 +6,14 @@ import './style.css'
 
 const Details = () => {
     let { id } = useParams()
-    console.log (id, 'cek id masuk')
 
     const dispatch = useDispatch()
 
-    const { data } = useSelector((state) => state.movies )
+    const { data } = useSelector((state) => state.movies)
 
     const dataMovie = data?.data?.data[0]
-    console.log (dataMovie, 'cek data movie detail')
 
-    useEffect (() => {
+    useEffect(() => {
         dispatch(GetMoviesbyId(id))
     }, [])
 
@@ -23,7 +21,7 @@ const Details = () => {
     return (
         <div className='details'>
             <div className="card3">
-                <img className='' src={`${process.env.REACT_APP_URL_BE}/uploads/${dataMovie?.image}`} alt={dataMovie?.title} title={dataMovie?.title}/>
+                <img className='' src={`${process.env.REACT_APP_URL_BE}/uploads/${dataMovie?.image}`} alt={dataMovie?.title} title={dataMovie?.title} />
             </div>
             <div>
                 <div>
@@ -35,7 +33,7 @@ const Details = () => {
                         <div>
                             <div>
                                 <h5>Release date</h5>
-                                <h4>{dataMovie?.release_date.slice(0,10)}</h4>
+                                <h4>{dataMovie?.release_date.slice(0, 10)}</h4>
                             </div>
                             <div style={{
                                 marginTop: 50
@@ -44,8 +42,8 @@ const Details = () => {
                                 <h4>{`${dataMovie?.duration_hour} hours ${dataMovie?.duration_minute} minutes`}</h4>
                             </div>
                         </div>
-                        <div style = {{
-                            marginLeft:  50
+                        <div style={{
+                            marginLeft: 50
                         }}>
                             <div>
                                 <h5>Directed by</h5>

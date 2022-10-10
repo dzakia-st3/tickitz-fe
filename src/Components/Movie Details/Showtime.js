@@ -9,14 +9,12 @@ import { GetSchedulebyId } from "../../Redux/actions/Schedule";
 
 const Showtime = () => {
     let { id } = useParams()
-    console.log(id, 'cek id jadwal')
 
     const dispatch = useDispatch()
 
     const { data } = useSelector((state) => state.schedule)
 
     const dataSchedule = data?.data?.data
-    console.log(dataSchedule, 'cek isi schedule')
 
     useEffect(() => {
         dispatch(GetSchedulebyId(id))
@@ -96,7 +94,7 @@ const Showtime = () => {
                                 <img src={`${process.env.REACT_APP_URL_BE}/uploads/${item.logo_cinema}`} style={{
                                     width: 150,
                                     height: 45,
-                                    marginRight: 20
+                                    marginRight: 20,
                                 }}></img>
                                 <div>
                                     <p style={{

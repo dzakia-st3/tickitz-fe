@@ -1,7 +1,7 @@
 import React from "react";
 import './style.css'
 
-const OrderInfo = () => {
+const OrderInfo = (props) => {
     return (
         <>
         <div className="text-ms" style={{paddingTop: '5%', marginBottom: '2%' }}>Order Info</div>
@@ -25,7 +25,7 @@ const OrderInfo = () => {
                 </div>
                 <div style={{display: 'flex', justifyContent: 'space-between'}}>
                     <p style={{color: 'grey', fontWeight: 'lighter', fontSize: 15}}>Seat choosed</p>
-                    <p style={{fontWeight: '700', fontSize: 15}}>C4, C5, C6</p>
+                    <p style={{fontWeight: '700', fontSize: 15}}></p>
                 </div>
                 <hr/>
                 <div style={{display: 'flex', justifyContent: 'space-between'}}>
@@ -39,3 +39,4 @@ const OrderInfo = () => {
 }
 
 export default OrderInfo
+

@@ -135,8 +135,6 @@ const AddMoviesError = (error) => {
 
 export const AddMovies = (formData, token) => {
     return (dispatch) => {
-        console.log(formData, 'cek data di action')
-        console.log(token, 'cek token di action')
         dispatch(AddMoviesRequest())
         axios({
             method: "POST",
@@ -179,8 +177,6 @@ const UpdateMoviesError = (error) => {
 
 export const UpdateMovies = (formData, token, id) => {
     return (dispatch) => {
-        console.log(formData, 'cek data update di action')
-        console.log(token, 'cek token update di action')
         dispatch(UpdateMoviesRequest())
         axios({
             method: "PATCH",

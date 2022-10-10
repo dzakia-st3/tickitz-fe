@@ -15,7 +15,6 @@ const Upcoming = () => {
     }, [])
 
     const { data, error, loading } = useSelector((state) => state.movies)
-    console.log(data, 'cek punya nya UC')
 
     if (loading) {
         return (<Loading />)

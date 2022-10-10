@@ -10,21 +10,16 @@ import './style.css'
 
 const DataMovie = () => {
     const { data, error, loading } = useSelector((state) => state.movies)
-    const { data : dataCUD } = useSelector((state) => state.moviesCud)
-    console.log (dataCUD, 'cel data CUD')
-    console.log(data, 'cek isi movie di admin')
+    const { data: dataCUD } = useSelector((state) => state.moviesCud)
 
     const [query, setQuery] = useSearchParams()
     const [paginate, setPaginate] = useState({ page: query.get('page') ?? 1, limit: 5 })
 
     const { data: dataAuth } = useSelector((state) => state.auth)
-    console.log(dataAuth, 'cek isi data auth')
-
     const [openForm, setOpenForm] = useState(false)
     const [openAddForm, setOpenAddForm] = useState(false)
 
     const token = dataAuth.token
-    console.log(token, 'cek isi token')
 
     const [refetch, setRefetch] = useState(false)
 
@@ -44,7 +39,6 @@ const DataMovie = () => {
         cast: "",
         synopsis: "",
     })
-    console.log(formUpdateData, 'cekUpdateData')
 
     const release_date_modif_update = moment(formUpdateData.release_date).format('YYYY-MM-DD')
 
@@ -62,9 +56,6 @@ const DataMovie = () => {
     const handleUpdateMovie = (e) => {
         e.preventDefault()
         dispatch(UpdateMovies(formDataUpdate, token, data.result[0].id))
-
-        console.log(data.result[0].id, 'cek id di update')
-        console.log(formUpdateData, 'cek isi data update di handle')
         setRefetch(!refetch)
     }
 
@@ -79,7 +70,6 @@ const DataMovie = () => {
         cast: "",
         synopsis: "",
     })
-    console.log(formAddData, 'cekAddData')
 
     const release_date_modif = moment(formAddData.release_date).format('YYYY-MM-DD')
 
@@ -97,14 +87,10 @@ const DataMovie = () => {
     const handleAddMovie = (e) => {
         e.preventDefault()
         dispatch(AddMovies(formData, token))
-
-        console.log(formData, 'cek isi data add di handle')
         setRefetch(!refetch)
     }
 
     let totalPages = Array(data.totalPage).fill() ?? []
-    console.log(totalPages, 'total Page')
-
     const handlePaginate = (page) => {
         setPaginate((prevState) => ({ ...prevState, page }))
         query.set('page', page)

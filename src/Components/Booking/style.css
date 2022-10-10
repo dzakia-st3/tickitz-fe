@@ -152,7 +152,7 @@
 }
 
 .text7 {
-  margin-top: 6%;
+  margin-top: 3%;
   margin-left: 110px;
 }
 
@@ -166,21 +166,21 @@
   background-color: #e3e5e9;
   width: 18px;
   height: 18px;
-  border-radius: 50%;
+  border-radius: 25%;
 }
 
 .Sold {
   background-color: #444451;
   width: 18px;
   height: 18px;
-  border-radius: 50%;
+  border-radius: 25%;
 }
 
 .Selected {
   background-color: #5424d6;
   width: 18px;
   height: 18px;
-  border-radius: 50%;
+  border-radius: 25%;
 }
 
 .text8 {

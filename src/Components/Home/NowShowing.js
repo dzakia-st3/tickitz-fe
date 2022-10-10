@@ -15,7 +15,6 @@ const NowShowing = () => {
     }, [])
 
     const { data, error, loading } = useSelector((state) => state.movies)
-    console.log(data, 'cek punya nya NS')
 
     if (loading) {
         return (<Loading />)

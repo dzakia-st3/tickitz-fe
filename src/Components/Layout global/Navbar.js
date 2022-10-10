@@ -12,7 +12,6 @@ import profile from '../img/1658089852664.jpg'
 
 const Navbar = () => {
   const { data, error, loading, isLogin } = useSelector((state) => state.auth)
-  console.log(data, 'cek isi data navbar')
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
