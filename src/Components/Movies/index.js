@@ -69,9 +69,9 @@ const Movies = () => {
                         })}
                     </div>
                 )}
-                <div className='pagination'>
+                <div className='paginations'>
                     {totalPages.map((item, index) => {
-                        return <button className={`button-3 btn-page ${paginate.page === index + 1 ? `btn-before` : `btn-after`}`} onClick={() => handlePaginate(index + 1)}>{index + 1}</button>
+                        return <button className={`button-3p btn-page ${paginate.page === index + 1 ? `btn-before` : `btn-after`}`} onClick={() => handlePaginate(index + 1)}>{index + 1}</button>
                     })}
                 </div>
             </section>

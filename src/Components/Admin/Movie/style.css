@@ -1,13 +1,59 @@
+
 .btn-add {
     background-color: #5F2EEA;
+    box-sizing: border-box;
+    padding: 1% 2%;
+	color: #FFFFFF;
+	border-radius: 4px;
+	cursor: pointer;
+	border-style: none;
+	box-shadow: 0px 8px 16px rgba(95, 46, 234, 0.24);
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+}
+
+.btn-edit {
+    background-color: rgba(95, 46, 234);
+    box-sizing: border-box;
+    padding: 3% 0;
+	color: #FFFFFF;
+	border-radius: 2px;
+	cursor: pointer;
+	border-style: none;
+	box-shadow: 0px 8px 16px rgba(95, 46, 234, 0.24);
+}
+
+.btn-edit:hover {
+    background-color: rgba(95, 46, 234, 0.85);
+}
+
+.btn-delete {
+    background-color: rgb(190, 10, 10);
+    box-sizing: border-box;
+    padding: 3% 0;
+	color: #FFFFFF;
+	border-radius: 2px;
+	cursor: pointer;
+	border-style: none;
+	box-shadow: 0px 8px 16px rgba(195, 5, 5, 0.24);
+}
+
+.btn-delete:hover {
+    background-color: rgba(190, 10, 10, 0.85);
 }
 
 .data-movie {
     background-color: #e3e5e9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2%;
 }
 
 .cards-movie {
     display: flex;
+    width: 90%;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -29,7 +75,7 @@
     border-radius: 8px;
 }
 .card-movie h3 {
-    font-weight: 500;
+    font-weight: bolder;
 	font-size: 12px;
 	line-height: 22px;
 	color: #14142B;

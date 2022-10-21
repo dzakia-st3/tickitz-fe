@@ -4,6 +4,7 @@ import { GetMoviesUC } from '../../Redux/actions/Movies'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { Loading, EmptyState } from '../../helper/WaitingState'
+import './style.css'
 
 
 const Upcoming = () => {
@@ -26,7 +27,7 @@ const Upcoming = () => {
     return (
         <>
             <section className='upcoming'>
-                <div className="top-upcoming">
+                <div className="top-upcomings">
                     <div className="top-left-upcoming">
                         <h3>Upcoming Movies</h3>
                     </div>

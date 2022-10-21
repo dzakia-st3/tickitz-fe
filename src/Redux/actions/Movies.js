@@ -1,4 +1,5 @@
 import { type } from "@testing-library/user-event/dist/type"
+import { getSpaceUntilMaxLength } from "@testing-library/user-event/dist/utils"
 import axios from "axios"
 
 const GetMoviesRequest = () => {
@@ -145,7 +146,7 @@ export const AddMovies = (formData, token) => {
             }
         })
             .then((res) => {
-                dispatch(AddMoviesSucces(res.data.data))
+                dispatch(AddMoviesSucces(res.data))
             })
             .catch((err) => {
                 dispatch(AddMoviesError(err.response))
@@ -187,7 +188,7 @@ export const UpdateMovies = (formData, token, id) => {
             }
         })
             .then((res) => {
-                dispatch(UpdateMoviesSucces(res.data.data))
+                dispatch(UpdateMoviesSucces(res.data))
             })
             .catch((err) => {
                 dispatch(UpdateMoviesError(err.response))
@@ -216,15 +217,15 @@ const DeleteMoviesError = (error) => {
     }
 }
 
-export const DeleteMovies = (id) => {
-    return (dispatch) => {
+export const DeleteMovies = (id, token) => {
+    return async (dispatch) => {
         dispatch(DeleteMoviesRequest(id))
-        axios({
+        await axios({
             method: "DELETE",
-            url: `${process.env.REACT_APP_URL_BE}/api/v1/movie/:id`,
+            url: `${process.env.REACT_APP_URL_BE}/api/v1/movie/${id}`,
             data: id,
             headers: {
-                Authorization: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjU3NDM5MDM2fQ.Qm-OEiGg1Lsm9RZ1_EtB0UXly52PbuaB_jK1b_gDa1w'
+                Authorization: token
             }
         })
             .then((res) => {

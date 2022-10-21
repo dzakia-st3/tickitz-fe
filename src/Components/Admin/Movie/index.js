@@ -1,62 +1,68 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createRef } from "react";
 import moment from 'moment';
 import { useDispatch, useSelector, } from "react-redux/es/exports";
-import { AddMovies, UpdateMovies } from "../../../Redux/actions/Movies";
+import { AddMovies, DeleteMovies, UpdateMovies } from "../../../Redux/actions/Movies";
 import { GetMovies } from "../../../Redux/actions/Movies";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import Swal from "sweetalert2";
 import './style.css'
 
 
 const DataMovie = () => {
     const { data, error, loading } = useSelector((state) => state.movies)
-    const { data: dataCUD } = useSelector((state) => state.moviesCud)
+    const { data: dataCUD, error: errorCUD } = useSelector((state) => state.moviesCud)
+    const { data: dataAuth } = useSelector((state) => state.auth)
+    const navigate = useNavigate()
 
     const [query, setQuery] = useSearchParams()
-    const [paginate, setPaginate] = useState({ page: query.get('page') ?? 1, limit: 5 })
+    const [paginate, setPaginate] = useState({ page: query.get('page') ?? 1, limit: 10 })
 
-    const { data: dataAuth } = useSelector((state) => state.auth)
+
     const [openForm, setOpenForm] = useState(false)
     const [openAddForm, setOpenAddForm] = useState(false)
+
 
     const token = dataAuth.token
 
     const [refetch, setRefetch] = useState(false)
+
+    function refreshPage() {
+        window.location.reload(false)
+    }
 
     useEffect(() => {
         dispatch(GetMovies(paginate))
     }, [paginate])
 
     const dispatch = useDispatch()
-    const [formUpdateData, setUpdateData] = useState({
-        image: null,
-        title: "",
-        categories: "",
-        release_date: "",
-        directed_by: "",
-        duration_hour: "",
-        duration_minute: "",
-        cast: "",
-        synopsis: "",
-    })
-
-    const release_date_modif_update = moment(formUpdateData.release_date).format('YYYY-MM-DD')
+    const inputFile = createRef()
+    const [formUpdateData, setUpdateData] = useState({})
 
     const formDataUpdate = new FormData()
     formDataUpdate.append('image', formUpdateData.image);
     formDataUpdate.append('title', formUpdateData.title);
     formDataUpdate.append('categories', formUpdateData.categories);
-    formDataUpdate.append('release_date', release_date_modif_update);
+    formDataUpdate.append('release_date', formUpdateData.release_date);
+    formDataUpdate.append('directed_by', formUpdateData.directed_by);
     formDataUpdate.append('duration_hour', formUpdateData.duration_hour);
     formDataUpdate.append('duration_minute', formUpdateData.duration_minute);
     formDataUpdate.append('cast', formUpdateData.cast);
     formDataUpdate.append('synopsis', formUpdateData.synopsis);
+    
 
+    const handleOpen = () => {
+        setOpenForm(true)
+    }
+    
+    const handleEditMovie = (prevData) => {
+        setUpdateData({
+            ...prevData,
+            release_date: moment(prevData.release_date).format('YYYY-MM-DD')
+        })
+    }
 
-    const handleUpdateMovie = (e) => {
-        e.preventDefault()
-        dispatch(UpdateMovies(formDataUpdate, token, data.result[0].id))
-        setRefetch(!refetch)
+    const handleUpdateMovie = () => {
+        dispatch(UpdateMovies(formDataUpdate, token, formUpdateData.id))
     }
 
     const [formAddData, setAddData] = useState({
@@ -78,11 +84,11 @@ const DataMovie = () => {
     formData.append('title', formAddData.title);
     formData.append('categories', formAddData.categories);
     formData.append('release_date', release_date_modif);
+    formData.append('directed_by', formAddData.directed_by);
     formData.append('duration_hour', formAddData.duration_hour);
     formData.append('duration_minute', formAddData.duration_minute);
     formData.append('cast', formAddData.cast);
     formData.append('synopsis', formAddData.synopsis);
-
 
     const handleAddMovie = (e) => {
         e.preventDefault()
@@ -97,6 +103,26 @@ const DataMovie = () => {
         setQuery(query)
     }
 
+    const handleDeleteMovie = (id) => {
+        dispatch(DeleteMovies(id, token))
+    }
+
+    useEffect(() => {
+        if (dataCUD.status == 200) {
+            Swal.fire({
+                icon: 'success',
+                title: '',
+                text: 'Success',
+            })
+            refreshPage()
+        } else if (errorCUD !== null) {
+            Swal.fire({
+                icon: 'error',
+                text: 'Oops, something wrong!'
+            })
+        }
+    }, [dataCUD])
+
 
     return (
         <div className="data-movie">
@@ -108,8 +134,11 @@ const DataMovie = () => {
                             <h3>{`${item.title}`}</h3>
                             <img className="card-movie-list"
                                 src={`${process.env.REACT_APP_URL_BE}/uploads/${item.image}`} alt={item.title} title={item.title} />
-                            <button className="btn-edit" onClick={() => setOpenForm(true)}>Edit</button>
-                            <button className='btn-delete'>Delete</button>
+                            <button className="btn-edit" onClick={() => {
+                                handleOpen();
+                                handleEditMovie(item);
+                                }} >Edit</button>
+                            <button className='btn-delete' onClick={() => handleDeleteMovie(item.id)}>Delete</button>
                         </div>
                     )
                 })}
@@ -122,7 +151,7 @@ const DataMovie = () => {
                             <div className="close-button" onClick={() => setOpenForm(false)}>X</div>
                         </div>
                         <hr />
-                        <form onSubmit={(e) => handleUpdateMovie(e)}>
+                        <form onSubmit={handleUpdateMovie} >
                             <div className="modal-body">
                                 <div className="mb-3">
                                     <label for="title" className="form-label">Title</label>
@@ -130,6 +159,7 @@ const DataMovie = () => {
                                         type="text"
                                         className="form-control"
                                         id="title"
+                                        value={formUpdateData.title}
                                         onChange={(e) => {
                                             setUpdateData(prevState => ({
                                                 ...prevState,
@@ -137,12 +167,14 @@ const DataMovie = () => {
                                             }))
                                         }} />
                                 </div>
-                                <div className="mb-3">
+                                <div className="mb-3" >
                                     <label for="image" className="form-label">image</label>
                                     <input
                                         type="file"
                                         className="form-control"
+                                        name="imageData"
                                         id="image"
+                                        ref={inputFile}
                                         onChange={(e) => {
                                             setUpdateData(prevState => ({
                                                 ...prevState,
@@ -156,6 +188,7 @@ const DataMovie = () => {
                                         type="date"
                                         className="form-control"
                                         id="release_date"
+                                        value={formUpdateData.release_date}
                                         onChange={(e) => {
                                             setUpdateData(prevState => ({
                                                 ...prevState,
@@ -169,6 +202,7 @@ const DataMovie = () => {
                                         type="text"
                                         className="form-control"
                                         id="duration_hour"
+                                        value={formUpdateData.duration_hour}
                                         onChange={(e) => {
                                             setUpdateData(prevState => ({
                                                 ...prevState,
@@ -182,6 +216,7 @@ const DataMovie = () => {
                                         type="text"
                                         className="form-control"
                                         id="duration_minute"
+                                        value={formUpdateData.duration_minute}
                                         onChange={(e) => {
                                             setUpdateData(prevState => ({
                                                 ...prevState,
@@ -194,6 +229,7 @@ const DataMovie = () => {
                                     <input
                                         type="text"
                                         className="form-control" id="directed_by"
+                                        value={formUpdateData.directed_by}
                                         onChange={(e) => {
                                             setUpdateData(prevState => ({
                                                 ...prevState,
@@ -206,6 +242,7 @@ const DataMovie = () => {
                                     <input
                                         type="text"
                                         className="form-control" id="cast"
+                                        value={formUpdateData.cast}
                                         onChange={(e) => {
                                             setUpdateData(prevState => ({
                                                 ...prevState,
@@ -219,6 +256,7 @@ const DataMovie = () => {
                                         type="text"
                                         className="form-control"
                                         id="categories"
+                                        value={formUpdateData.categories}
                                         onChange={(e) => {
                                             setUpdateData(prevState => ({
                                                 ...prevState,
@@ -232,6 +270,7 @@ const DataMovie = () => {
                                         rows={10}
                                         className="form-control"
                                         id="synopsis"
+                                        value={formUpdateData.synopsis}
                                         onChange={(e) => {
                                             setUpdateData(prevState => ({
                                                 ...prevState,
