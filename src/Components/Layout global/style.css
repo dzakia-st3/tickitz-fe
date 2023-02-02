@@ -128,6 +128,67 @@
 	justify-content: center;
 }
 
+.nav-toggler {
+	display: none;
+	flex-direction: column;
+	height: 20px;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.nav-toggler span {
+	display: block;
+	height: 2px;
+	width: 16px;
+	background-color:#000000;
+	border-radius: 3px;
+	position: relative;
+	
+}
+
+.nav-toggler input {
+	position: absolute;
+	width: 25px;
+	height: 28px;
+	opacity: 0;
+	cursor: pointer;
+	z-index: 5;
+}
+
+.nav-toggler .mid {
+	display: block;
+	height: 2px;
+	width: 8px;
+	background-color:#000000;
+	border-radius: 3px;
+}
+
+.nav-toggler span:nth-child(2) {
+	transform-origin: 0 0 ;
+	transition: .5s;
+}
+
+.nav-toggler span:nth-child(4) {
+	transform-origin: 0 100% ;
+	transition: .5s;
+}
+
+.nav-toggler input:checked ~ span:nth-child(2) {
+	transform: rotate(45deg) translate(2px , 0); 
+	transition: .5s;
+
+}
+
+.nav-toggler input:checked ~ span:nth-child(4) {
+	transform: rotate(-45deg) translate(5px, -3px);
+	transition: .5s;
+}
+
+.nav-toggler input:checked ~ span:nth-child(3) {
+	transform: scale(0);
+	opacity: 0;
+}
+
 /* ---- Footer ---- */
 
 .end {
@@ -293,16 +354,35 @@
 
 @media screen and (max-width: 768px) {
 
-	.nav {
-		box-shadow: 0px 3px 0px #A0A3BD;
+	.nav-before {
+		box-shadow: 0px 0px 5px #A0A3BD;
 		display: flex;
-		flex-direction: row-reverse;
 		justify-content: space-between;
 		align-items: center;
+		width: 75vw;
+		margin: 0;
+		padding: 2% 3%;
 	}
 
 	.nav-right {
 		display: none;
+	}
+
+	.nav-left-text-admin {
+		display: none;
+	}
+
+	.nav-left-text {
+		display: none;
+	}
+
+	.nav-toggler {
+		display: flex;
+		margin-right: 10%;
+	}
+
+	.nav-left img {
+		margin-left: -35%;
 	}
 
 	.nav-inner {
@@ -313,10 +393,6 @@
 		align-items: center;
 	}
 
-	.nav-toggler {
-		display: flex;
-	}
-
 	.end {
 		padding-left: 50px;
 		padding-right: 50px;
@@ -324,6 +400,11 @@
 
 	.end-row {
 		flex-direction: column;
+	}
+
+	.tickitz-logo img {
+		margin-left: -4%;
+		margin-bottom: 5%;
 	}
 
 	.tickitz-logo p {
@@ -361,6 +442,11 @@
 		padding-top: 0;
 		padding-bottom: 48px;
 		width: 30%;
+	}
+
+	.followUs h2 {
+		padding-left: 0%;
+		padding-bottom: 5%;
 	}
 
 	.socialMedia-logo {

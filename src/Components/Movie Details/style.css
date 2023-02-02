@@ -3,8 +3,17 @@
 	margin: 5% 5%;
 	padding: 2% 3%;
 }
+
 .text2 {
-    display: flex;
+	display: flex;
+}
+
+.showtime {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 2%;
 }
 
 .card3 {
@@ -30,13 +39,25 @@
 	border-radius: 4px;
 }
 
+.card-schedule-box {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.card-schedule-box-img {
+	width: 10vw;
+	height: 8vh;
+	margin-right: 5%;
+}
+
 .time-card {
 	box-sizing: border-box;
-	margin: 3% 2% ;
+	margin: 3% 2%;
 	width: 20%;
 	padding: 2% 2%;
 	text-align: center;
-	font-size: smaller;	
+	font-size: smaller;
 	cursor: pointer;
 }
 
@@ -55,14 +76,135 @@
 	border: none;
 	cursor: pointer;
 	padding: 3% 0;
-  }
-  
-  .btn-booking:hover {
+}
+
+.btn-booking:hover {
 	background: #754bea;
 	box-shadow: 1px 1px 3px #5424d6;
-  }
-  
-  .btn-booking a {
+}
+
+.btn-booking a {
 	text-decoration: none;
 	color: #e3e5e9;
-  }
+}
+
+.container-schedule {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 0;
+	justify-content: left;
+}
+
+.text9 {
+	font-weight: bolder;
+	font-size: 20;
+	margin: 0;
+	padding-bottom: 10
+}
+
+.text10 {
+	color: grey;
+	font-size: 15;
+	margin: 0;
+	line-height: 150%;
+	margin-top: 7%;
+}
+
+.text11 {
+	font-weight: bolder;
+	letter-spacing: 2px;
+}
+
+.times {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: left;
+}
+
+.price {
+	display: flex;
+	justify-content: space-between;
+	font-size: 20
+}
+
+.end-showtime {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: 3% 0
+}
+
+.end-showtime a {
+	font-weight: bolder;
+	text-decoration: none;
+	color: #5424d6
+}
+
+.line-showtime {
+	width: 43%;
+	color: grey;
+}
+
+.option-box {
+	width: 30%;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 2%;
+}
+
+/* ---- Responsive ---- */
+
+@media screen and (max-width: 768px) {
+	.details {
+		width: 75vw;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.card3 {
+		width: 32vh;
+		height: 45vh;
+	}
+
+	.card4 {
+		width: 60vw;
+		margin: 0;
+		margin-left: -10%;
+		padding: 0;
+	}
+
+	.container-schedule {
+		padding: 0 2%;
+	}
+
+	.card-schedule {
+		flex: 0 0 auto;
+		width: 47%;
+	}
+
+	.card3 img {
+		margin: 0;
+	}
+
+	.showtime {
+		width: 75vw;
+	}
+
+	.time-card {
+		margin: 2% 4%;
+		padding: 2% 2%;
+		font-size: smaller;
+	}
+
+	.option-box {
+		width: 22%;
+	}
+
+	.line-showtime {
+		width: 35%;
+	}
+
+}

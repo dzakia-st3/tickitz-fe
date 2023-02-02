@@ -23,7 +23,7 @@ const Details = () => {
             <div className="card3">
                 <img className='' src={`${process.env.REACT_APP_URL_BE}/uploads/${dataMovie?.image}`} alt={dataMovie?.title} title={dataMovie?.title} />
             </div>
-            <div>
+            <div className='card4'>
                 <div>
                     <div>
                         <h2>{dataMovie?.title}</h2>

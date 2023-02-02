@@ -1,543 +1,542 @@
 {
-    "seats": {
-      "sections": [
-        {
-          "event_id": 2,
-          "color": null,
-          "subsections": [
-            {
-              "id": 22,
-              "section_id": 7,
-              "seats_by_rows": {
-                "A": [
-                  {
-                    "number": "1",
-                    "name": "1A",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "2",
-                    "name": "2A",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "3",
-                    "name": "3A",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "4",
-                    "name": "4A",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "5",
-                    "name": "5A",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "6",
-                    "name": "6A",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "7",
-                    "name": "7A",
-                    "status": "booked"
-                  }
-                ],
-                "B": [
-                  {
-                    "number": "1",
-                    "name": "1B",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "2",
-                    "name": "2B",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "3",
-                    "name": "3B",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "4",
-                    "name": "4B",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "5",
-                    "name": "5B",
-                    "status": "free"
-                  },
-                  {
-                    "number": "6",
-                    "name": "6B",
-                    "status": "free"
-                  },
-                  {
-                    "number": "7",
-                    "name": "7B",
-                    "status": "free"
-                  }
-                ],
-                "C": [
-                  {
-                    "number": "1",
-                    "name": "1C",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "2",
-                    "name": "2C",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "3",
-                    "name": "3C",
-                    "status": "free"
-                  },
-                  {
-                    "number": "4",
-                    "name": "4C",
-                    "status": "free"
-                  },
-                  {
-                    "number": "5",
-                    "name": "5C",
-                    "status": "free"
-                  },
-                  {
-                    "number": "6",
-                    "name": "6C",
-                    "status": "free"
-                  },
-                  {
-                    "number": "7",
-                    "name": "7C",
-                    "status": "free"
-                  }
-                ],
-                "D": [
-                  {
-                    "number": "1",
-                    "name": "1D",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "2",
-                    "name": "2D",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "3",
-                    "name": "3D",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "4",
-                    "name": "4D",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "5",
-                    "name": "5D",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "6",
-                    "name": "6D",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "7",
-                    "name": "7D",
-                    "status": "booked"
-                  }
-                ],
-                "E": [
-                  {
-                    "number": "1",
-                    "name": "1E",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "2",
-                    "name": "2E",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "3",
-                    "name": "3E",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "4",
-                    "name": "4E",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "5",
-                    "name": "5E",
-                    "status": "free"
-                  },
-                  {
-                    "number": "6",
-                    "name": "6E",
-                    "status": "free"
-                  },
-                  {
-                    "number": "7",
-                    "name": "7E",
-                    "status": "free"
-                  }
-                ],
-                "F": [
-                  {
-                    "number": "1",
-                    "name": "1F",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "2",
-                    "name": "2F",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "3",
-                    "name": "3F",
-                    "status": "free"
-                  },
-                  {
-                    "number": "4",
-                    "name": "4F",
-                    "status": "free"
-                  },
-                  {
-                    "number": "5",
-                    "name": "5F",
-                    "status": "free"
-                  },
-                  {
-                    "number": "6",
-                    "name": "6F",
-                    "status": "free"
-                  },
-                  {
-                    "number": "7",
-                    "name": "7F",
-                    "status": "free"
-                  }
-                ],
-                "G": [
-                  {
-                    "number": "1",
-                    "name": "1G",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "2",
-                    "name": "2G",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "3",
-                    "name": "3G",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "4",
-                    "name": "4G",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "5",
-                    "name": "5G",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "6",
-                    "name": "6G",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "7",
-                    "name": "7G",
-                    "status": "booked"
-                  }
-                ]
-              }
-            },
-            {
-              "id": 23,
-              "section_id": 7,
-              "seats_by_rows": {
-                "A": [
-                  {
-                    "number": "8",
-                    "name": "8A",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "9",
-                    "name": "9A",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "10",
-                    "name": "10A",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "11",
-                    "name": "11A",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "12",
-                    "name": "12A",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "13",
-                    "name": "13A",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "14",
-                    "name": "14A",
-                    "status": "booked"
-                  }
-                ],
-                "B": [
-                  {
-                    "number": "8",
-                    "name": "8B",
-                    "status": "free"
-                  },
-                  {
-                    "number": "9",
-                    "name": "9B",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "10",
-                    "name": "10B",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "11",
-                    "name": "11B",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "12",
-                    "name": "12B",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "13",
-                    "name": "13B",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "14",
-                    "name": "14B",
-                    "status": "booked"
-                  }
-                ],
-                "C": [
-                  {
-                    "number": "8",
-                    "name": "8C",
-                    "status": "free"
-                  },
-                  {
-                    "number": "9",
-                    "name": "9C",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "10",
-                    "name": "10C",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "11",
-                    "name": "11C",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "12",
-                    "name": "12C",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "13",
-                    "name": "13C",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "14",
-                    "name": "14C",
-                    "status": "booked"
-                  }
-                ],
-                "D": [
-                  {
-                    "number": "8",
-                    "name": "8D",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "9",
-                    "name": "9D",
-                    "status": "free"
-                  },
-                  {
-                    "number": "10",
-                    "name": "10D",
-                    "status": "free"
-                  },
-                  {
-                    "number": "11",
-                    "name": "11D",
-                    "status": "free"
-                  },
-                  {
-                    "number": "12",
-                    "name": "12D",
-                    "status": "free"
-                  },
-                  {
-                    "number": "13",
-                    "name": "13D",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "14",
-                    "name": "14D",
-                    "status": "booked"
-                  }
-                ],
-                "E": [
-                  {
-                    "number": "8",
-                    "name": "8E",
-                    "status": "free"
-                  },
-                  {
-                    "number": "9",
-                    "name": "9E",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "10",
-                    "name": "10E",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "11",
-                    "name": "11E",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "12",
-                    "name": "12E",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "13",
-                    "name": "13E",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "14",
-                    "name": "14E",
-                    "status": "booked"
-                  }
-                ],
-                "F": [
-                  {
-                    "number": "8",
-                    "name": "8F",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "9",
-                    "name": "9F",
-                    "status": "free"
-                  },
-                  {
-                    "number": "10",
-                    "name": "10F",
-                    "status": "free"
-                  },
-                  {
-                    "number": "11",
-                    "name": "11F",
-                    "status": "free"
-                  },
-                  {
-                    "number": "12",
-                    "name": "12F",
-                    "status": "free"
-                  },
-                  {
-                    "number": "13",
-                    "name": "13F",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "14",
-                    "name": "14F",
-                    "status": "booked"
-                  }
-                ],
-                "G": [
-                  {
-                    "number": "8",
-                    "name": "8G",
-                    "status": "free"
-                  },
-                  {
-                    "number": "9",
-                    "name": "9G",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "10",
-                    "name": "10G",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "11",
-                    "name": "11G",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "12",
-                    "name": "12G",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "13",
-                    "name": "13G",
-                    "status": "booked"
-                  },
-                  {
-                    "number": "14",
-                    "name": "14G",
-                    "status": "booked"
-                  }
-                ]
-              }
+  "seats": {
+    "sections": [
+      {
+        "event_id": 2,
+        "color": null,
+        "subsections": [
+          {
+            "id": 22,
+            "section_id": 7,
+            "seats_by_rows": {
+              "A": [
+                {
+                  "number": "1",
+                  "name": "1A",
+                  "status": "booked"
+                },
+                {
+                  "number": "2",
+                  "name": "2A",
+                  "status": "booked"
+                },
+                {
+                  "number": "3",
+                  "name": "3A",
+                  "status": "booked"
+                },
+                {
+                  "number": "4",
+                  "name": "4A",
+                  "status": "booked"
+                },
+                {
+                  "number": "5",
+                  "name": "5A",
+                  "status": "booked"
+                },
+                {
+                  "number": "6",
+                  "name": "6A",
+                  "status": "booked"
+                },
+                {
+                  "number": "7",
+                  "name": "7A",
+                  "status": "booked"
+                }
+              ],
+              "B": [
+                {
+                  "number": "1",
+                  "name": "1B",
+                  "status": "booked"
+                },
+                {
+                  "number": "2",
+                  "name": "2B",
+                  "status": "booked"
+                },
+                {
+                  "number": "3",
+                  "name": "3B",
+                  "status": "booked"
+                },
+                {
+                  "number": "4",
+                  "name": "4B",
+                  "status": "booked"
+                },
+                {
+                  "number": "5",
+                  "name": "5B",
+                  "status": "free"
+                },
+                {
+                  "number": "6",
+                  "name": "6B",
+                  "status": "free"
+                },
+                {
+                  "number": "7",
+                  "name": "7B",
+                  "status": "free"
+                }
+              ],
+              "C": [
+                {
+                  "number": "1",
+                  "name": "1C",
+                  "status": "booked"
+                },
+                {
+                  "number": "2",
+                  "name": "2C",
+                  "status": "booked"
+                },
+                {
+                  "number": "3",
+                  "name": "3C",
+                  "status": "free"
+                },
+                {
+                  "number": "4",
+                  "name": "4C",
+                  "status": "free"
+                },
+                {
+                  "number": "5",
+                  "name": "5C",
+                  "status": "free"
+                },
+                {
+                  "number": "6",
+                  "name": "6C",
+                  "status": "free"
+                },
+                {
+                  "number": "7",
+                  "name": "7C",
+                  "status": "free"
+                }
+              ],
+              "D": [
+                {
+                  "number": "1",
+                  "name": "1D",
+                  "status": "booked"
+                },
+                {
+                  "number": "2",
+                  "name": "2D",
+                  "status": "booked"
+                },
+                {
+                  "number": "3",
+                  "name": "3D",
+                  "status": "booked"
+                },
+                {
+                  "number": "4",
+                  "name": "4D",
+                  "status": "booked"
+                },
+                {
+                  "number": "5",
+                  "name": "5D",
+                  "status": "booked"
+                },
+                {
+                  "number": "6",
+                  "name": "6D",
+                  "status": "booked"
+                },
+                {
+                  "number": "7",
+                  "name": "7D",
+                  "status": "booked"
+                }
+              ],
+              "E": [
+                {
+                  "number": "1",
+                  "name": "1E",
+                  "status": "booked"
+                },
+                {
+                  "number": "2",
+                  "name": "2E",
+                  "status": "booked"
+                },
+                {
+                  "number": "3",
+                  "name": "3E",
+                  "status": "booked"
+                },
+                {
+                  "number": "4",
+                  "name": "4E",
+                  "status": "booked"
+                },
+                {
+                  "number": "5",
+                  "name": "5E",
+                  "status": "free"
+                },
+                {
+                  "number": "6",
+                  "name": "6E",
+                  "status": "free"
+                },
+                {
+                  "number": "7",
+                  "name": "7E",
+                  "status": "free"
+                }
+              ],
+              "F": [
+                {
+                  "number": "1",
+                  "name": "1F",
+                  "status": "booked"
+                },
+                {
+                  "number": "2",
+                  "name": "2F",
+                  "status": "booked"
+                },
+                {
+                  "number": "3",
+                  "name": "3F",
+                  "status": "free"
+                },
+                {
+                  "number": "4",
+                  "name": "4F",
+                  "status": "free"
+                },
+                {
+                  "number": "5",
+                  "name": "5F",
+                  "status": "free"
+                },
+                {
+                  "number": "6",
+                  "name": "6F",
+                  "status": "free"
+                },
+                {
+                  "number": "7",
+                  "name": "7F",
+                  "status": "free"
+                }
+              ],
+              "G": [
+                {
+                  "number": "1",
+                  "name": "1G",
+                  "status": "booked"
+                },
+                {
+                  "number": "2",
+                  "name": "2G",
+                  "status": "booked"
+                },
+                {
+                  "number": "3",
+                  "name": "3G",
+                  "status": "booked"
+                },
+                {
+                  "number": "4",
+                  "name": "4G",
+                  "status": "booked"
+                },
+                {
+                  "number": "5",
+                  "name": "5G",
+                  "status": "booked"
+                },
+                {
+                  "number": "6",
+                  "name": "6G",
+                  "status": "booked"
+                },
+                {
+                  "number": "7",
+                  "name": "7G",
+                  "status": "booked"
+                }
+              ]
             }
-          ]
-        } 
-      ]
-    }
+          },
+          {
+            "id": 23,
+            "section_id": 7,
+            "seats_by_rows": {
+              "A": [
+                {
+                  "number": "8",
+                  "name": "8A",
+                  "status": "booked"
+                },
+                {
+                  "number": "9",
+                  "name": "9A",
+                  "status": "booked"
+                },
+                {
+                  "number": "10",
+                  "name": "10A",
+                  "status": "booked"
+                },
+                {
+                  "number": "11",
+                  "name": "11A",
+                  "status": "booked"
+                },
+                {
+                  "number": "12",
+                  "name": "12A",
+                  "status": "booked"
+                },
+                {
+                  "number": "13",
+                  "name": "13A",
+                  "status": "booked"
+                },
+                {
+                  "number": "14",
+                  "name": "14A",
+                  "status": "booked"
+                }
+              ],
+              "B": [
+                {
+                  "number": "8",
+                  "name": "8B",
+                  "status": "free"
+                },
+                {
+                  "number": "9",
+                  "name": "9B",
+                  "status": "booked"
+                },
+                {
+                  "number": "10",
+                  "name": "10B",
+                  "status": "booked"
+                },
+                {
+                  "number": "11",
+                  "name": "11B",
+                  "status": "booked"
+                },
+                {
+                  "number": "12",
+                  "name": "12B",
+                  "status": "booked"
+                },
+                {
+                  "number": "13",
+                  "name": "13B",
+                  "status": "booked"
+                },
+                {
+                  "number": "14",
+                  "name": "14B",
+                  "status": "booked"
+                }
+              ],
+              "C": [
+                {
+                  "number": "8",
+                  "name": "8C",
+                  "status": "free"
+                },
+                {
+                  "number": "9",
+                  "name": "9C",
+                  "status": "booked"
+                },
+                {
+                  "number": "10",
+                  "name": "10C",
+                  "status": "booked"
+                },
+                {
+                  "number": "11",
+                  "name": "11C",
+                  "status": "booked"
+                },
+                {
+                  "number": "12",
+                  "name": "12C",
+                  "status": "booked"
+                },
+                {
+                  "number": "13",
+                  "name": "13C",
+                  "status": "booked"
+                },
+                {
+                  "number": "14",
+                  "name": "14C",
+                  "status": "booked"
+                }
+              ],
+              "D": [
+                {
+                  "number": "8",
+                  "name": "8D",
+                  "status": "booked"
+                },
+                {
+                  "number": "9",
+                  "name": "9D",
+                  "status": "free"
+                },
+                {
+                  "number": "10",
+                  "name": "10D",
+                  "status": "free"
+                },
+                {
+                  "number": "11",
+                  "name": "11D",
+                  "status": "free"
+                },
+                {
+                  "number": "12",
+                  "name": "12D",
+                  "status": "free"
+                },
+                {
+                  "number": "13",
+                  "name": "13D",
+                  "status": "booked"
+                },
+                {
+                  "number": "14",
+                  "name": "14D",
+                  "status": "booked"
+                }
+              ],
+              "E": [
+                {
+                  "number": "8",
+                  "name": "8E",
+                  "status": "free"
+                },
+                {
+                  "number": "9",
+                  "name": "9E",
+                  "status": "booked"
+                },
+                {
+                  "number": "10",
+                  "name": "10E",
+                  "status": "booked"
+                },
+                {
+                  "number": "11",
+                  "name": "11E",
+                  "status": "booked"
+                },
+                {
+                  "number": "12",
+                  "name": "12E",
+                  "status": "booked"
+                },
+                {
+                  "number": "13",
+                  "name": "13E",
+                  "status": "booked"
+                },
+                {
+                  "number": "14",
+                  "name": "14E",
+                  "status": "booked"
+                }
+              ],
+              "F": [
+                {
+                  "number": "8",
+                  "name": "8F",
+                  "status": "booked"
+                },
+                {
+                  "number": "9",
+                  "name": "9F",
+                  "status": "free"
+                },
+                {
+                  "number": "10",
+                  "name": "10F",
+                  "status": "free"
+                },
+                {
+                  "number": "11",
+                  "name": "11F",
+                  "status": "free"
+                },
+                {
+                  "number": "12",
+                  "name": "12F",
+                  "status": "free"
+                },
+                {
+                  "number": "13",
+                  "name": "13F",
+                  "status": "booked"
+                },
+                {
+                  "number": "14",
+                  "name": "14F",
+                  "status": "booked"
+                }
+              ],
+              "G": [
+                {
+                  "number": "8",
+                  "name": "8G",
+                  "status": "free"
+                },
+                {
+                  "number": "9",
+                  "name": "9G",
+                  "status": "booked"
+                },
+                {
+                  "number": "10",
+                  "name": "10G",
+                  "status": "booked"
+                },
+                {
+                  "number": "11",
+                  "name": "11G",
+                  "status": "booked"
+                },
+                {
+                  "number": "12",
+                  "name": "12G",
+                  "status": "booked"
+                },
+                {
+                  "number": "13",
+                  "name": "13G",
+                  "status": "booked"
+                },
+                {
+                  "number": "14",
+                  "name": "14G",
+                  "status": "booked"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
   }
-  
+}

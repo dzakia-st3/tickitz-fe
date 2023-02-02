@@ -27,6 +27,19 @@
 	font-weight: 600;
 }
 
+.months {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	justify-content: space-between;
+	overflow-x: auto;
+	padding: 0% 5% 2% 5%;
+}
+
+.months::-webkit-scrollbar {
+	width: 0;
+}
+
 .cardVA {
 	width: 223px;
 	height: 452px;
@@ -146,14 +159,18 @@
 /* ---- Responsive ---- */
 
 @media screen and (max-width: 768px) {
-
-    .month {
-        padding-right: 36px;
-    }
     
+	.months {
+		width: 65vw;
+	}
+
     .box {
         flex: 0 0 auto;
     }
+
+	.view-all {
+		width: 75vw;
+	}
 
     .cardVA {
         margin-bottom: 5%;

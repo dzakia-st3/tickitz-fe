@@ -1,29 +1,21 @@
 import React from 'react'
+import '../../Components/Booking/style.css'
 import { ChangeMovie, Seat, OrderInfo } from '../../Components/Booking'
 import Layout from '../../Components/Layout global/Layout'
 
 const BookingLayout = () => {
   return (
     <Layout>
-      <div style={{
-        display : 'flex',
-        justifyContent: 'center',
-        backgroundColor: '#e3e5e9',
-        paddingTop: '2%'
-        }}>
-        <div style={{
-          width: '55%'
-        }}>
+      {/* <div className='booking-layout'>
+        <div className='booking-left'>
           <ChangeMovie />
           <Seat />
         </div>
-        <div style={{
-          width: '25%',
-          marginLeft: '3%'
-        }}>
+        <div className='booking-right'>
           <OrderInfo />
         </div>
-      </div>
+      </div> */}
+      <Seat/>
     </Layout>
   )
 }

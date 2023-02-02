@@ -39,7 +39,7 @@ const Movies = () => {
                         <h3>List Movies</h3>
                     </div>
                 </div>
-                <div className="month">
+                <div className="months">
                     <div className="box">September</div>
                     <div className="box">October</div>
                     <div className="box">November</div>

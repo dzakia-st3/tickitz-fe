@@ -15,24 +15,19 @@ const Showtime = () => {
     const { data } = useSelector((state) => state.schedule)
 
     const dataSchedule = data?.data?.data
+    console.log(dataSchedule)
 
     useEffect(() => {
         dispatch(GetSchedulebyId(id))
     }, [])
 
     return (
-        <>
+        <div className="showtime">
             <p style={{
                 fontSize: 20,
                 fontWeight: 'bolder',
-                margin: '2% 0%'
             }}>Showtimes and Tickets</p>
-            <div style={{
-                width: '30%',
-                display: 'flex',
-                justifyContent: 'space-between',
-                marginBottom: '2%'
-            }}>
+            <div className="option-box">
                 <div style={{
                     background: '#d3d4d6',
                     borderRadius: 4,
@@ -75,50 +70,21 @@ const Showtime = () => {
                     </select>
                 </div>
             </div>
-            <div style={{
-                width: '100%',
-                display: 'flex',
-                flexWrap: 'wrap',
-                marginLeft: '3%',
-                justifyContent: 'left',
-                alignContent: 'center'
-            }}>
+            <div 
+            className="container-schedule">
                 {dataSchedule?.map((item) => {
                     return (
                         <div className="card-schedule">
-                            <div style={{
-                                display: 'flex',
-                                justifyContent: 'space-between',
-                                alignItems: 'center'
-                            }}>
-                                <img src={`${process.env.REACT_APP_URL_BE}/uploads/${item.logo_cinema}`} style={{
-                                    width: 150,
-                                    height: 45,
-                                    marginRight: 20,
-                                }}></img>
+                            <div className="card-schedule-box">
+                                <img className="card-schedule-box-img" src={`${process.env.REACT_APP_URL_BE}/uploads/${item.logo_cinema}`} />
                                 <div>
-                                    <p style={{
-                                        fontWeight: 'bolder',
-                                        fontSize: 20,
-                                        margin: 0,
-                                        paddingBottom: 10
-                                    }}>{item.cinema}</p>
-                                    <p style={{
-                                        color: 'grey',
-                                        fontSize: 15,
-                                        margin: 0,
-                                        lineHeight: 1.5
-                                    }}>{`${item.addres}
+                                    <p className="text9">{item.cinema}</p>
+                                    <p className="text10">{`${item.addres}
                                     ${item.place}`}</p>
                                 </div>
                             </div>
                             <hr />
-                            <div style={{
-                                display: 'flex',
-                                flexWrap: 'wrap',
-                                alignContent: 'center',
-                                justifyContent: 'left'
-                            }}>
+                            <div className="times">
                                 {item.showtime?.map((item) => {
                                     return (
                                         <div className="time-card">{item}</div>
@@ -133,18 +99,11 @@ const Showtime = () => {
                                 <div className="time-card">08.30</div>
                                 <div className="time-card">08.30</div> */}
                             </div>
-                            <div style={{
-                                display: 'flex',
-                                justifyContent: 'space-between',
-                                fontSize: 20
-                            }}>
+                            <div className="price">
                                 <p>Price</p>
-                                <p style={{
-                                    fontWeight: 'bolder',
-                                    letterSpacing: 2
-                                }}>{`${item.price}/seat`}</p>
+                                <p className="text11">{`${item.price}/seat`}</p>
                             </div>
-                            <button className="btn-booking"><Link to={'/booking'}>Book Now</Link></button>
+                            <button className="btn-booking"><Link to={`/booking`}>Book Now</Link></button>
                         </div>
                     )
                 })}
@@ -365,28 +324,12 @@ const Showtime = () => {
                     <button className="btn-booking"><Link to={'#'}>Book Now</Link></button>
                 </div> */}
             </div>
-            <div style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                width: '100%',
-                margin: '3% 0'
-            }}>
-                <hr style={{
-                    width: '43%',
-                    color: 'grey',
-                }}></hr>
-                <Link to={'#'} style={{
-                    fontWeight: 'bolder',
-                    textDecoration: 'none',
-                    color: '#5424d6',
-                }}>view more</Link>
-                <hr style={{
-                    width: '43%',
-                    color: 'grey',
-                }}></hr>
+            <div className="end-showtime">
+                <hr className="line-showtime"></hr>
+                <Link to={'#'}>view more</Link>
+                <hr className="line-showtime"></hr>
             </div>
-        </>
+        </div>
     )
 }
 

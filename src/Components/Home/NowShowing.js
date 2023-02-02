@@ -15,6 +15,7 @@ const NowShowing = () => {
     }, [])
 
     const { data, error, loading } = useSelector((state) => state.movies)
+    console.log(data, 'cek isi data')
 
     if (loading) {
         return (<Loading />)

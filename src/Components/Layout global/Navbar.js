@@ -18,122 +18,70 @@ const Navbar = () => {
   const [open, setOpen] = useState(false)
 
   return (
-      <div className='nav-before'>
-          <div className='nav-left'>
-          {data?.role === 'admin' ? (
-            <>
-            <Link to = {'/'}><img src={MainLogoPurple} /></Link>
+    <div className='nav-before'>
+      <div className='nav-left'>
+        {data?.role === 'admin' ? (
+          <>
+            <Link to={'/'}><img src={MainLogoPurple} /></Link>
             <div className='nav-left-text-admin'>
               <Link to={'#'}>Dashboard</Link>
               <Link to={'/manage-movie'}>Manage Movie</Link>
               <Link to={'#'}>Manage Schedule</Link>
             </div>
-            </>
-            ) : (
-              <>
-              <Link to = {'/'}><img src={MainLogoPurple} /></Link>
-              <div className='nav-left-text'>
-                <Link to={'/'}>Home</Link>
-                <Link to={'/movies'}>List Movie</Link>
-              </div> 
-              </>  
+          </>
+        ) : (
+          <>
+            <Link to={'/'}><img src={MainLogoPurple} /></Link>
+            <div className='nav-left-text'>
+              <Link to={'/'}>Home</Link>
+              <Link to={'/movies'}>List Movie</Link>
+            </div>
+          </>
         )}
-          </div> 
-        <div className='nav-right'>
-          {isLogin ? (
-            <>
-              <SearchBar/>
-              <div className='profile'>
-                <div>
-                  <img src={profile} onClick={() => setOpen(true)} />
-                </div>
-                <div className='dropdown-menu'>
-                  {open ? (
-                    <ul onClick={() => setOpen(false)}>
-                      <li>
-                        <Link to={'/movies'}>
-                          <img src={logoUser}></img>
-                          Profile</Link></li>
-                      <hr />
-                      <li onClick={() => {dispatch(AuthLogout())
+      </div>
+      <div className='nav-right'>
+        {isLogin ? (
+          <>
+            <SearchBar />
+            <div className='profile'>
+              <div>
+                <img src={profile} onClick={() => setOpen(true)} />
+              </div>
+              <div className='dropdown-menu'>
+                {open ? (
+                  <ul onClick={() => setOpen(false)}>
+                    <li>
+                      <Link to={'/movies'}>
+                        <img src={logoUser}></img>
+                        Profile</Link></li>
+                    <hr />
+                    <li onClick={() => {
+                      dispatch(AuthLogout())
                       Swal.fire({
                         icon: 'success',
                         title: '',
                         text: 'Logout Success',
                       })
                       navigate('/')
-                      }}><Link to={'/movies'}>
+                    }}><Link to={'/movies'}>
                         <img src={logout}></img>
                         Logout</Link></li>
-                    </ul>)
-                    : ''}
-                </div>
+                  </ul>)
+                  : ''}
               </div>
-            </>
-          ) : (
-            <button className='btn1'><Link to={'/login'}>Sign Up</Link></button>
-          )}
-        </div>
-        
-    
-    
-    
-     {/* (isLogin === true && data?.role === 'user') ? (
-         <>
-         <div className='nav-left'>
-           <img src={MainLogoPurple} />
-           <div className='nav-left-text'>
-             <Link to={'/'}>Home</Link>
-             <Link to={'/movies'}>List Movie</Link>
-           </div>
-         </div>
-         <div className='nav-right'>
-           <Container
-             onMouseEnter={() => setIsHovered(true)}
-             onMouseLeave={() => setIsHovered(false)}
-             onFocus={() => setIsFocused(true)}
-             onBlur={() => setIsFocused(false)}
-             hover={showSearchInput}
-           >
-             <SearchInput placeholder='Search Movie..' ref={targetRef} showSearchInput={showSearchInput} />
-             <img className='icon' src={search} />
-           </Container>
-           <div className='profile'>
-             <div>
-               <img src={profile} onClick={() => setOpen(true)} />
-             </div>
-             <div className='dropdown-menu'>
-               {open ? (
-                 <ul onClick={() => setOpen(false)}>
-                   <li>
-                     <Link to={'/movies'}>
-                       <img src={logoUser}></img>
-                       Profile</Link></li>
-                   <hr />
-                   <li><Link to={'/movies'}>
-                     <img src={logout}></img>
-                     Logout</Link></li>
-                 </ul>)
-                 : ''}
-             </div>
-           </div>
-         </div>
-         </>
-     ) : (
-         <>
-         <div className='nav-left'>
-           <img src={MainLogoPurple} />
-           <div className='nav-left-text'>
-             <Link to={'/'}>Home</Link>
-             <Link to={'/movies'}>List Movie</Link>
-           </div>
-         </div>
-         <div className='nav-right'>
-           <button className='btn1'><Link to={'/login'}>Sign Up</Link></button>
-         </div>
-         </>
-   )};  */}
-  </div>
+            </div>
+          </>
+        ) : (
+          <button className='btn1'><Link to={'/login'}>Sign Up</Link></button>
+        )}
+      </div>
+      <div for="nav-check" className="nav-toggler">
+        <input type="checkbox" />
+        <span></span>
+        <span className="mid"></span>
+        <span></span>
+      </div>
+    </div>
   )
 }
 

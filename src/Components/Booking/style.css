@@ -230,6 +230,7 @@
 .personal-box {
   padding: 10% 0;
 }
+
 .phone-number-box {
   box-sizing: border-box;
   border: 1px solid rgb(118, 118, 118);
@@ -238,3 +239,33 @@
   margin-bottom: 5%;
 }
 
+.booking-left {
+  width: 55%;
+}
+
+.booking-right {
+  width: 25%;
+  margin-left: 3%;
+}
+
+.booking-layout {
+  display: flex;
+  justify-content: center;
+  background-color: #e3e5e9;
+  padding-top: 2%;
+}
+
+@media screen and (max-width: 768px) {
+
+  .booking-layout {
+    width: 79.8vw;
+  }
+
+  .booking-left {
+    width: 60vw;
+  }
+
+  .booking-right {
+    display: none;
+  }
+}

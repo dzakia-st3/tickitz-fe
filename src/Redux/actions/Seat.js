@@ -63,7 +63,10 @@ export const AddSeat = (formData) => {
         axios({
             method: "POST",
             url: `${process.env.REACT_APP_URL_BE}/api/v1/seat/`,
-            data: formData,
+            data: {
+                id_booking : 6,
+                seat_choosed : formData
+            },
         })
             .then((res) => {
                 dispatch(AddSeatSucces(res.data.data))
